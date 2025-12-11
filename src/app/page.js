@@ -1,66 +1,87 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Navbar from "@/components/Navbar";
+import Category from "@/components/Category";
+import FlashSale from "@/components/FlashSale";
+import New from "@/components/New";
+import ProductSection from "@/components/ProductSection";
+import LatestProducts from "@/components/LatestProducts";
+import BestSelling from "@/components/BestSelling";
+import Customer from "@/components/Customer";
+import Faq from "@/components/Faq";
+import Service from "@/components/Service";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import PageWrapper from "@/components/PageWrapper";
+import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+    <>
+      <ScrollToTop />
+      <Navbar />
+      <PageWrapper>
+        <section className={styles.hero}>
+          <div className={styles.heroLeft}>
+            <div className={styles.heroGrid}>
+              <img src="/images/dimg5.png" alt="" className={`${styles.circle} ${styles.i1}`} />
+              <img src="/images/dimg1.png" alt="" className={`${styles.oval} ${styles.i2}`} />
+              <img src="/images/dimg3.png" alt="" className={`${styles.circle} ${styles.i3}`} />
+              <img src="/images/dimg4.png" alt="" className={`${styles.circle} ${styles.i4}`} />
+              <img src="/images/dimg2.png" alt="" className={`${styles.circle} ${styles.i5}`} />
+            </div>
+          </div>
+
+          <div className={styles.heroRight}>
+            <h1>
+              Best Place to Shop for <br /> Flowers Online
+            </h1>
+
+            <p>
+              I am text block. Click edit button to change this text. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+              nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+
+            <button
+              className={styles.shopBtn}
+              onClick={() => router.push("/products")}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+              Shop Now
+            </button>
+
+            <div className={styles.stats}>
+              <div className={styles.stat}>
+                <h2>5K</h2>
+                <span>Active Users</span>
+              </div>
+              <div className={styles.stat}>
+                <h2>4.5K</h2>
+                <span>Client Satisfaction</span>
+              </div>
+              <div className={styles.stat}>
+                <h2>1.2K</h2>
+                <span>Partners Join Us</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Category />
+        <FlashSale />
+        <New />
+        <ProductSection />
+        <LatestProducts />
+        <BestSelling />
+        <Customer />
+        <Faq />
+        <Service />
+        <Footer />
+      </PageWrapper>
+    </>
   );
 }

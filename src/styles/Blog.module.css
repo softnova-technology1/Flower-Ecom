@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+.main {
+  background-color: #1f242b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+   padding: 40px;
+   overflow: hidden;
+}
+
+.main1 h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+   font-family: "Syne", sans-serif;
+}
+
+.main2 {
+  display: flex;
+  gap: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.pImage {
+  width: 180px;
+  height: 250px;
+  border-radius: 200px;
+  object-fit: cover;
+  transition: transform 0.2s linear;
+  position: relative;
+  bottom: 45px;
+
+}
+
+.centerImg {
+  margin-top: 55px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+ 
+}
+.blogwrapper {
+  width: 100%;
+  background: #0f1111;
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.blogcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 50px;
+  background: #0f1111;
+  padding-top: 80px;
+  max-width: 1350px;
+  margin: 0 auto;
+
+}
+
+.blogcard {
+  border: 1px solid #333;
+  background: #111;
+  color: #f5f5f5;
+  padding: 20px;
+
+}
+
+.blogtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+   font-family: "Syne", sans-serif;
+}
+
+.blogimg {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+.blogmeta {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ddd;
+  font-weight: 700;
+   font-family: "Syne", sans-serif;
+}
+
+.blogdesc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}

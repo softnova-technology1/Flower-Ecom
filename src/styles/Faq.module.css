@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
+.section {
+  padding: 50px 80px;
+  background: #111214;
+  color: white;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-family: "Syne", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.faqItem {
+  margin-bottom: 25px;
+}
+
+.faqQuestion {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-family: "Syne", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.faqAnswer {
+  margin-top: 10px;
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: #3a3a3a;
+  margin-top: 15px;
+}
+.rightBox {
+  background: #b27633;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.rightBox h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Syne", sans-serif;
+}
+
+.rightBox p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.contactBtn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-size: 15px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactBtn:hover {
+  background: white;
+  color: #b27633;
+}
+.faqItem {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.6s ease-out;
+}
+.faqItem.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .rightBox {
+    margin-top: 40px;
+  }
+}
+
+

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
+.flashContainer {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  background: #14181f;
+  color: white;
+  overflow: hidden;
+  font-family: "Syne", sans-serif;
+}
+
+.timerWrapper {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.timerBox {
+  background: #0f1114;
+  color: white;
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerBox h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.timerBox p {
+  margin: 0;
+  font-size: 12px;
+  color: #b9b9b9;
+}
+
+.viewBtn {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d6862d;
+  padding: 14px 30px;
+  border-radius: 40px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "Syne", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.viewBtn:hover {
+  background-color: #c17c25;
+}
+
+.flashRight {
+  width: 100%;
+}
+
+.flashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timerAnimate {
+  animation: slideFromRight 0.5s ease forwards;
+}
+
+.flashProducts {
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+}
+
+.cardBox {
+  width: 260px;
+  height: 330px;
+  border: 1px solid #363636;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1f27;
+  border-radius: 10px;
+}
+
+.cardBox.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardBox:hover {
+  border-color: #d9a96c;
+  transform: translateY(-4px);
+}
+
+.cardBox h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price {
+  margin: 0;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.price del {
+  opacity: 0.5;
+}
+
+.price span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.productImg {
+  width: 180px;
+  margin-top: 20px;
+  display: block;
+  border-radius: 15px;
+  object-fit: cover;
+  
+}
+
+.flashLeft {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-120px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animateImage {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.flashBigImg {
+  width: 300px;
+  height: 420px;
+  border-radius: 90% / 50%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.3;
+  user-select: none;
+  pointer-events: none;
+}
+@media (min-width:1441px) {
+  .flashContainer{
+    padding-left: 250px;
+  }
+}

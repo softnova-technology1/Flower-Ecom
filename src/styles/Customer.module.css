@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
+.section {
+  padding: 80px 40px;
+  background: #1d1f22;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-family: "Syne", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+   overflow: hidden !important;
+}
+
+.card {
+  background: #121315;
+  padding: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 17px;
+  margin: 0;
+  font-family: "Syne", sans-serif;
+}
+
+.role {
+  margin: 0;
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.star {
+  color: #f4b000;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #d5d5d5;
+  line-height: 1.6;
+  font-family: "Syne", sans-serif;
+}
+.card {
+  opacity: 0;
+  transition: 1s ease;
+ 
+}
+
+.card.left {
+  transform: translateX(-80px);
+}
+
+.card.right {
+  transform: translateX(80px);
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
