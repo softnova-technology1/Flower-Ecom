@@ -1,198 +1,323 @@
+// "use client";
+
+// import React, { useEffect, useState } from "react";
+// import { toast } from "react-toastify";
+// import { contactAPI } from "@/lib/api";
+// import Footer from "@/components/Footer";
+// import ScrollToTop from "@/components/ScrollToTop";
+// import styles from "@/styles/Contact.module.css";
+// import FinalNav from "@/components/FinalNav";
+// import { Container } from "react-bootstrap";
+// import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+// import {
+//   FaTwitter,
+//   FaFacebookF,
+//   FaYoutube,
+//   FaVimeoV,
+//   FaInstagram,
+// } from "react-icons/fa";
+// export default function ContactPage() {
+//   const [offsetY, setOffsetY] = useState(0);
+//   const [loading, setLoading] = useState(false);
+//   const [formData, setFormData] = useState({
+//     name: "",
+//     email: "",
+//     message: "",
+//   });
+
+//   const handleScroll = () => {
+//     setOffsetY(window.scrollY);
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({ ...prev, [name]: value }));
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     // Validation
+//     if (
+//       !formData.name.trim() ||
+//       !formData.email.trim() ||
+//       !formData.message.trim()
+//     ) {
+//       toast.error("Please fill all fields", {
+//         position: "top-center",
+//       });
+//       return;
+//     }
+
+//     if (!/\S+@\S+\.\S+/.test(formData.email)) {
+//       toast.error("Please enter a valid email", {
+//         position: "top-center",
+//       });
+//       return;
+//     }
+
+//     setLoading(true);
+
+//     try {
+//       const response = await contactAPI.submit(formData);
+
+//       if (response.success) {
+//         toast.success(
+//           "Message sent successfully! We'll get back to you soon.",
+//           {
+//             position: "top-center",
+//           }
+//         );
+//         // Clear form
+//         setFormData({ name: "", email: "", message: "" });
+//       }
+//     } catch (error) {
+//       toast.error(
+//         error.message || "Failed to send message. Please try again.",
+//         {
+//           position: "top-center",
+//         }
+//       );
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <>
+//       <ScrollToTop />
+//       <FinalNav />
+//       <section>
+//         <div className={styles.hero}>
+//           <Container>
+//             <div className={styles.contents}>
+//               <h1>Make Your Home as Comfortable as Possible</h1>
+//               <p>
+//                 Make your home as comfortable as possible with the natural charm
+//                 of fresh flowers.
+//                 <br />
+//                 Add comfort and elegance to your home with beautifully crafted
+//                 fresh flower bouquets
+//               </p>
+//             </div>
+//           </Container>
+//         </div>
+//       </section>
+//       <section className={styles.heroSection}>
+//         <div className={styles.hero}>
+//           <div className={styles.card}>
+//             <h3>CONTACT US</h3>
+
+//             <div className={styles.info}>
+//               <p>
+//                 <FiMail /> info@example.com
+//               </p>
+//               <p>
+//                 <FiPhone /> 001985512-854
+//               </p>
+//               <p>
+//                 <FiMapPin />
+//                 John Smith 123 Main Street Amsterdam,
+//                 <br />
+//                 NH 1000 Netherlands
+//               </p>
+//             </div>
+
+//             <div className={styles.social}>
+//               <h4>Social</h4>
+
+//               <p>
+//                 <FaTwitter /> @exampleAccount
+//               </p>
+//               <p>
+//                 <FaFacebookF /> @exampleAccount
+//               </p>
+//               <p>
+//                 <FaYoutube /> @exampleAccount
+//               </p>
+//               <p>
+//                 <FaVimeoV /> @exampleAccount
+//               </p>
+//               <p>
+//                 <FaInstagram /> @exampleAccount
+//               </p>
+//             </div>
+
+//             <div className={styles.hours}>
+//               <h4>Hours</h4>
+//               <p>08:00 – 12:00 Uhr</p>
+//               <p>13:00 – 17:00 Uhr</p>
+//             </div>
+//           </div>
+
+//           {/* RIGHT CONTENT */}
+//           <div className={styles.rightContent}>
+//             <h2>Keep in Touch</h2>
+
+//             <p className={styles.description}>
+//               We’d love to be part of your special moments. Whether you’re
+//               looking for a handcrafted bouquet, a graceful floral decor, or
+//               something unique—feel free to reach out to us. Our team is always
+//               happy to assist you with care and creativity.
+//             </p>
+
+//             <form className={styles.form}>
+//               <div className={styles.row}>
+//                 <input placeholder="First Name" />
+//                 <input placeholder="Last Name" />
+//               </div>
+
+//               <input placeholder="Email" />
+//               <input placeholder="Phone Number" />
+//               <textarea placeholder="Message" rows="4" />
+
+//               <button>Send Message</button>
+//             </form>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* MAP */}
+//       <section className={styles.map}>
+//         <iframe
+//           src="https://www.google.com/maps?q=Grand%20Central%20Terminal&output=embed"
+//           loading="lazy"
+//         />
+//       </section>
+//       <Footer />
+//     </>
+//   );
+// }
+
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { toast } from "react-toastify";
-import { contactAPI } from "@/lib/api";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import PageWrapper from "@/components/PageWrapper";
+import React from "react";
 import styles from "@/styles/Contact.module.css";
+import ScrollToTop from "@/components/ScrollToTop";
+import FinalNav from "@/components/FinalNav";
+import Footer from "@/components/Footer";
+import { Container } from "react-bootstrap";
+
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaYoutube,
+  FaVimeoV,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function ContactPage() {
-    const [offsetY, setOffsetY] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
+  return (
+    <>
+      <ScrollToTop />
+      <FinalNav />
 
-    const handleScroll = () => {
-        setOffsetY(window.scrollY);
-    };
+      {/* TOP HERO */}
+      <section className={styles.topHero}>
+        <Container>
+          <div className={styles.contents}>
+            <h1>Make Your Home as Comfortable as Possible</h1>
+            <p>
+              Make your home as comfortable as possible with the natural charm
+              of fresh flowers.
+              <br />
+              Add comfort and elegance with beautifully crafted bouquets.
+            </p>
+          </div>
+        </Container>
+      </section>
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+      {/* CONTACT SECTION */}
+      <section className={styles.heroSection}>
+        <div className={styles.contactHero}>
+          {/* LEFT CARD */}
+          <div className={styles.card}>
+            <h3>CONTACT US</h3>
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
-    };
+            <div className={styles.info}>
+              <p>
+                <FiMail /> info@example.com
+              </p>
+              <p>
+                <FiPhone /> 001985512-854
+              </p>
+              <p>
+                <FiMapPin />
+                John Smith 123 Main Street Amsterdam,
+                <br /> NH 1000 Netherlands
+              </p>
+            </div>
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+            <div className={styles.social}>
+              <h4>Social</h4>
+              <p>
+                <FaTwitter /> @exampleAccount
+              </p>
+              <p>
+                <FaFacebookF /> @exampleAccount
+              </p>
+              <p>
+                <FaYoutube /> @exampleAccount
+              </p>
+              <p>
+                <FaVimeoV /> @exampleAccount
+              </p>
+              <p>
+                <FaInstagram /> @exampleAccount
+              </p>
+            </div>
 
-        // Validation
-        if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-            toast.error("Please fill all fields", {
-                position: "top-center",
-            });
-            return;
-        }
+            <div className={styles.hours}>
+              <h4>Hours</h4>
+              <p>08:00 – 12:00 Uhr</p>
+              <p>13:00 – 17:00 Uhr</p>
+            </div>
+          </div>
 
-        if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            toast.error("Please enter a valid email", {
-                position: "top-center",
-            });
-            return;
-        }
+          {/* RIGHT FORM */}
+          <div className={styles.rightContent}>
+            <h2>Keep in Touch</h2>
 
-        setLoading(true);
+            <p className={styles.description}>
+              We’d love to be part of your special moments. Whether you’re
+              looking for a handcrafted bouquet, a graceful garland, or details
+              about our bouquet training classes, Dazzling Sky is just a message
+              away. Let flowers speak your emotions—reach out to us for orders,
+              custom designs, collaborations, or inquiries. Our team is always
+              happy to assist you with care and creativity.
+            </p>
 
-        try {
-            const response = await contactAPI.submit(formData);
+            <form className={styles.form}>
+              <div className={styles.row}>
+                <input placeholder="First Name" />
+                <input placeholder="Last Name" />
+              </div>
 
-            if (response.success) {
-                toast.success("Message sent successfully! We'll get back to you soon.", {
-                    position: "top-center",
-                });
-                // Clear form
-                setFormData({ name: "", email: "", message: "" });
-            }
-        } catch (error) {
-            toast.error(error.message || "Failed to send message. Please try again.", {
-                position: "top-center",
-            });
-        } finally {
-            setLoading(false);
-        }
-    };
+              <input placeholder="Email" />
+              <input placeholder="Phone Number" />
+              <textarea placeholder="Message" rows="4" />
 
-    return (
-        <>
-            <ScrollToTop />
-            <Navbar />
-            <PageWrapper>
-                <div className={styles.main}>
-                    <div className={styles.main1}>
-                        <h1>Contact Us</h1>
-                    </div>
+              <button>Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-                    <div className={styles.main2}>
-                        <img
-                            src="/images/flr1.jpg"
-                            alt=""
-                            className={styles.pImage}
-                            style={{ transform: `translateY(${offsetY * -0.25}px)` }}
-                        />
+      {/* MAP */}
+      <section className={styles.map}>
+        <iframe
+          src="https://www.google.com/maps?q=Grand%20Central%20Terminal&output=embed"
+          loading="lazy"
+        />
+      </section>
 
-                        <img
-                            src="/images/flr2.jpg"
-                            alt=""
-                            className={`${styles.pImage} ${styles.centerImg}`}
-                            style={{
-                                position: "absolute",
-                                top: "50%",
-                                left: "50%",
-                                transform: `translate(-50%, -50%) translateY(${offsetY * 0.35
-                                    }px)`,
-                                zIndex: 1,
-                            }}
-                        />
-
-                        <img
-                            src="/images/flr3.jpg"
-                            alt=""
-                            className={styles.pImage}
-                            style={{ transform: ` translateY(${offsetY * -0.2}px) ` }}
-                        />
-                    </div>
-                </div>
-
-                <div className={styles.container}>
-                    <div className={styles.mapCircle}>
-                        <iframe
-                            title="London Eye Map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19809.28020296546!2d-0.127758!3d51.503324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900b9847d%3A0xceb545d49c3e39fb!2sLondon%20Eye!5e0!3m2!1sen!2suk!4v123456789"
-                            width="100%"
-                            height="100%"
-                            style={{ border: "0" }}
-                            allowFullScreen=""
-                            loading="lazy"
-                        ></iframe>
-                    </div>
-
-                    <div className={styles.rightSection}>
-                        <h1 className={styles.title}>
-                            Don't Hesitate to <br />
-                            Contact Us, Send <br />
-                            Your Message
-                        </h1>
-
-                        <p className={styles.text}>
-                            I am text block. Click edit button to change this text. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
-                            nec ullamcorper mattis, pulvinar dapibus leo.
-                        </p>
-
-                        <div className={styles.info}>
-                            <p>📧 ex@domain.com</p>
-                            <p>📞 (+1) 234 56 789</p>
-                            <p>📍 633, Northwest, Apartment 11, Ecuador</p>
-                        </div>
-
-                        <form className={styles.form} onSubmit={handleSubmit}>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                disabled={loading}
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                disabled={loading}
-                            />
-                            <textarea
-                                name="message"
-                                placeholder="Message"
-                                rows="4"
-                                value={formData.message}
-                                onChange={handleChange}
-                                disabled={loading}
-                            ></textarea>
-                            <button type="submit" className={styles.btn} disabled={loading}>
-                                {loading ? "Sending..." : "Send"}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <div className={styles.wrapper}>
-                    <div className={styles.box}>
-                        <h1>View Frequently Asked Questions</h1>
-
-                        <p>
-                            I am text block. Click edit button to change this text. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Ut <br></br>elit
-                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        </p>
-
-                        <a href="/faq">
-                            <button className={styles.btnn}>View FAQ</button>
-                        </a>
-                    </div>
-                </div>
-                <Footer />
-            </PageWrapper>
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

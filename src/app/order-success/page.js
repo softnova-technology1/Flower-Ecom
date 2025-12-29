@@ -2,11 +2,11 @@
 
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/OrderSucces.module.css";
+import FinalNav from "@/components/FinalNav";
 
 export default function OrderSuccessPage() {
     const router = useRouter();
@@ -16,7 +16,7 @@ export default function OrderSuccessPage() {
     return (
         <>
             <ScrollToTop />
-            <Navbar />
+            <FinalNav />
             <PageWrapper>
                 <div className={styles.successPage}>
                     <div className={styles.successBox}>

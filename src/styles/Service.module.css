@@ -30,7 +30,7 @@
   transform: translateY(-4px);
 }
 .card:hover {
-  border-color: #d9a96c;
+   border: 1px solid #771658;
 }
 .icon {
   color: #fff;

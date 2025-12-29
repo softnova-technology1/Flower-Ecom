@@ -75,7 +75,7 @@
 }
 
 .btn {
-  background: #ba7d3a;
+  background: linear-gradient(to right,#771658, #52206E);
   border: none;
   padding: 0.9rem 2rem;
   border-radius: 2rem;
@@ -83,10 +83,11 @@
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
+  color: white;
 }
 
 .btn:hover {
-  border: 1px solid #ba7d3a;
+  border: 1px solid #771658;
   background: transparent;
   color: white;
  

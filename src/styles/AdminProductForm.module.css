@@ -109,12 +109,12 @@
 }
 
 .submitBtn {
-    background: #c78a3a;
+     background: linear-gradient(to right,#771658, #52206E);
     color: white;
 }
 
 .submitBtn:hover {
-    background: #b07a2a;
+    border: 1px solid #771658;
 }
 
 .submitBtn:disabled {

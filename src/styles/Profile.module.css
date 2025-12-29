@@ -35,7 +35,7 @@
 
 .editBtn {
     padding: 8px 20px;
-    background: #c78a3a;
+   background: linear-gradient(to right,#771658, #52206E);
     color: white;
     border: none;
     border-radius: 6px;
@@ -45,7 +45,7 @@
 }
 
 .editBtn:hover {
-    background: #b07a2a;
+ border: 1px solid #771658;
 }
 
 .form {
@@ -97,7 +97,7 @@
 
 .saveBtn {
     padding: 12px 30px;
-    background: #c78a3a;
+     background: linear-gradient(to right,#771658, #52206E);
     color: white;
     border: none;
     border-radius: 8px;
@@ -108,7 +108,7 @@
 }
 
 .saveBtn:hover {
-    background: #b07a2a;
+   border: 1px solid #771658;
 }
 
 .saveBtn:disabled {

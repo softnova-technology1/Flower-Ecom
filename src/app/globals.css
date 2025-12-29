@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 
 * {
   box-sizing: border-box;
@@ -10,9 +10,9 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  /* overflow-x: hidden; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +31,7 @@ a {
 }
 
 .accordion-item {
-  border-bottom: 1px solid #31363C !important;
+  border-bottom: 1px solid #31363c !important;
 }
 
 .accordion-button {
@@ -53,5 +53,158 @@ a {
 
   #flush-collapseSix {
     border-bottom: 1px solid black !important;
+  }
+}
+
+/* offcanvas */
+
+.btn-primary {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 🔥 FIXED PART (only change) */
+.offcanvas-body,
+.offcanvas-header {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+/* Offcanvas background image */
+.offcanvas {
+  background-image: url("/images/off.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  /* background-size: cover !important; */
+  background-color: black !important;
+}
+
+.offcanvas-title {
+  margin: auto;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 40px;
+  height: 40px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow:
+    0 0 12px rgba(37, 211, 102, 0.7),
+    0 0 25px rgba(37, 211, 102, 0.5),
+    0 8px 20px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #883c3a, #ff8ad8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(136, 60, 58, 0.45);
+  text-decoration: none;
+  overflow: visible;
+  transition: transform 0.35s ease;
+}
+
+.wa-float:hover {
+  transform: translateY(-4px) scale(1.06);
+}
+
+.wa-icon {
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+}
+
+.wa-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 216, 0.6),
+    rgba(255, 138, 216, 0.15),
+    rgba(255, 138, 216, 0)
+  );
+  animation: pulse 2.6s infinite ease-out;
+  z-index: 1;
+}
+
+.wa-ring.delay1 {
+  animation-delay: 0.9s;
+}
+
+.wa-ring.delay2 {
+  animation-delay: 1.8s;
+}
+
+.wa-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 216, 0.45),
+    rgba(255, 138, 216, 0)
+  );
+  filter: blur(6px);
+  animation: glowPulse 2.2s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  65% {
+    transform: scale(1.9);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 600px) {
+  .wa-float {
+    width: 56px;
+    height: 56px;
+  }
+  .wa-icon {
+    width: 28px;
+    height: 28px;
   }
 }

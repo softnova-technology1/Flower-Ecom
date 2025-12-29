@@ -79,7 +79,7 @@
 
 .logoutBtn {
     padding: 10px;
-    background: #ff4444;
+    background: linear-gradient(to right,#771658, #52206E);
     color: white;
     border: none;
     border-radius: 6px;

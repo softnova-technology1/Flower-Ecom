@@ -44,7 +44,7 @@
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  background: #d6862d;
+  background: linear-gradient(to right,#771658, #52206E);
   padding: 14px 30px;
   border-radius: 40px;
   border: none;
@@ -57,7 +57,8 @@
 }
 
 .viewBtn:hover {
-  background-color: #c17c25;
+   border: 1px solid #771658;
+   background: transparent;
 }
 
 .flashRight {
@@ -118,7 +119,7 @@
 }
 
 .cardBox:hover {
-  border-color: #d9a96c;
+  border: 1px solid #771658;
   transform: translateY(-4px);
 }
 

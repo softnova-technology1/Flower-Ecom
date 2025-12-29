@@ -1,0 +1,80 @@
+.page {
+  background: #000;
+  color: #fff;
+  padding: 60px 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.item img {
+  width: 100px;
+}
+
+.info h4 {
+  margin-bottom: 8px;
+}
+
+.info p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.qty {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.qty button {
+  border: 1px solid #c46ccf;
+  background: transparent;
+  color: #fff;
+  padding: 4px 10px;
+}
+
+.price {
+  color: #c46ccf;
+}
+
+.totalBox {
+  border: 1px solid #c46ccf;
+  padding: 30px;
+}
+
+.row,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.total {
+  font-size: 18px;
+}
+
+.pay {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(90deg, #a855f7, #d946ef);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}

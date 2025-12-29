@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
 
+
 .section {
   padding: 50px 80px;
   background: #111214;
@@ -54,7 +55,7 @@
   margin-top: 15px;
 }
 .rightBox {
-  background: #b27633;
+  background: linear-gradient(to right, #771658, #52206e);
   padding: 50px;
   border-radius: 8px;
 }
@@ -77,7 +78,7 @@
   padding: 10px 25px;
   font-size: 15px;
   background: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 40px;
   color: white;
   cursor: pointer;
@@ -85,8 +86,8 @@
 }
 
 .contactBtn:hover {
-  background: white;
-  color: #b27633;
+  border: 1px solid #3e092d;
+  color: #fffefc;
 }
 .faqItem {
   opacity: 0;
@@ -107,5 +108,3 @@
     margin-top: 40px;
   }
 }
-
-

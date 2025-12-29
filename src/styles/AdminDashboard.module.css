@@ -142,7 +142,7 @@
 
 .bar {
     width: 100%;
-    background: linear-gradient(to top, #c78a3a, #d6a35a);
+    background: linear-gradient(to right,#771658, #52206E);
     border-radius: 6px 6px 0 0;
     position: relative;
     display: flex;

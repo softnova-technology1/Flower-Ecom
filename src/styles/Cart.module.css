@@ -74,7 +74,7 @@
 
 .updateBtn {
   padding: 10px 20px;
-  background: #b87e48;
+  background: linear-gradient(to right,#771658, #52206E);
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -85,7 +85,7 @@
 }
 
 .updateBtn:hover {
-  background: #d19b63;
+   border: 1px solid #771658;
 }
 
 .couponBox {
@@ -115,7 +115,7 @@
 
 .couponBtn {
   padding: 12px 20px;
-  background: #b87e48;
+   background: linear-gradient(to right,#771658, #52206E);
   border: none;
   color: #fff;
   border-radius: 6px;
@@ -124,7 +124,7 @@
 }
 
 .couponBtn:hover {
-  background: #d19b63;
+  border: 1px solid #771658;
 }
 
 .cartTotalsBox {
@@ -165,7 +165,7 @@
   width: 100%;
   padding: 10px;
   margin-top: 25px;
-  background: #b87e48;
+  background: linear-gradient(to right,#771658, #52206E);
   border: none;
   border-radius: 30px;
   color: #fff;

@@ -1,4 +1,4 @@
-.checkoutPage {
+/* .checkoutPage {
   background: #1e1d1d;
   min-height: 100vh;
   padding: 40px 0;
@@ -99,7 +99,7 @@
 .placeOrderBtn {
   width: 100%;
   padding: 15px;
-  background: #b87e48;
+  background: linear-gradient(to right,#771658, #52206E);
   color: #fff;
   font-size: 16px;
   border: none;
@@ -109,11 +109,254 @@
 }
 
 .placeOrderBtn:hover {
-  background: #d19b63;
+   border: 1px solid #771658;
 }
 
 @media (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
   }
+} */
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 30px 40px;
+  font-family: Arial, sans-serif;
+}
+
+.left {
+  width: 55%;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 18px;
+  margin: 20px 0 12px;
+}
+
+.stepDisabled {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #c9c9c9;
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  /* border-radius: 7px; */
+  border: 1px solid #d5d5d5;
+  
+}
+
+.inputError {
+  border-color: #ff3b3b;
+}
+
+.error {
+  font-size: 13px;
+  color: #ff3b3b;
+  margin-top: 6px;
+}
+
+.twoInputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.twoInputs input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  border: 1px solid #d5d5d5;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #7a3b82, #c24aa8, #994fa3);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* margin-top: 20px; */
+}
+
+.doneBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleDone {
+  color: #198754;
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.line {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* PAYMENT */
+.purchaseButton {
+  width: 100%;
+  padding: 14px;
+  background: black;
+  color: white;
+  /* border-radius: 7px; */
+  border: none;
+  cursor: pointer;
+}
+.payButton1 {
+  width: 100%;
+  padding: 14px;
+  background: rgb(255, 255, 255);
+  color: rgb(10, 10, 10);
+  /* border-radius: 7px; */
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* RIGHT SUMMARY */
+.rightBox {
+  width: 40%;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  position: sticky;
+  top: 30px;
+}
+
+.summaryTitle {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.productBox {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.productBox img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.productName {
+  font-weight: 600;
+}
+
+.price {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.rows,
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.totalRow {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.secure {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .left,
+  .rightBox {
+    width: 100%;
+  }
+
+  .rightBox {
+    position: static;
+  }
+}
+.giftText {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.giftContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.giftInput {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  /* border-radius: 4px; */
+}
+
+.giftButton {
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.loginBanner {
+  background: #d9d9dc;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.loginBanner p {
+  font-size: 15px;
+  color: #222;
+}
+
+.loginLink {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
 }

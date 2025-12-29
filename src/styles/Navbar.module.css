@@ -47,7 +47,6 @@
   color: #d6a35a;
 }
 
-
 .dropdown {
   position: relative;
 }
@@ -84,7 +83,6 @@
   color: #cfa05f;
 }
 
-
 .cartSection {
   display: flex;
   align-items: center;
@@ -99,7 +97,7 @@
 }
 
 .cartIcon {
-  background: #c78a3a;
+  background: linear-gradient(to right, #771658, #52206e);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -128,7 +126,6 @@
   right: -7px;
   font-weight: bold;
 }
-
 
 .offCanvas {
   position: fixed;
@@ -160,7 +157,6 @@
   z-index: 1500;
 }
 
-
 .cartHeader {
   display: flex;
   justify-content: space-between;
@@ -178,7 +174,6 @@
   cursor: pointer;
   color: #edebeb;
 }
-
 
 .cartItems {
   flex: 1;
@@ -220,11 +215,10 @@
   font-family: "Syne", sans-serif;
 }
 
-
 .viewCartBtn {
   width: 100%;
   padding: 10px;
-  background: #c78a3a;
+  background: linear-gradient(to right, #771658, #52206e);
   color: white;
   border: none;
   font-size: 15px;
@@ -237,7 +231,8 @@
 }
 
 .viewCartBtn:hover {
-  background: #ae762f;
+  background: transparent;
+  border: 1px solid #771658;
 }
 
 /* User Menu Styles */
@@ -347,12 +342,14 @@
 
 .loginLink:hover {
   background: #1c1f23;
+  border: 1px solid #771658;
 }
 
 .registerLink {
-  background: #c78a3a;
+  background: linear-gradient(to right, #771658, #52206e);
 }
 
 .registerLink:hover {
-  background: #ae762f;
+  background: transparent;
+  border: 1px solid #771658;
 }

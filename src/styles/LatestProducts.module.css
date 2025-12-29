@@ -32,7 +32,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: #d9a96c;
+  border: 1px solid #771658;
 }
 
 .name {

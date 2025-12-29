@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { toast } from "react-toastify";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Auth.module.css";
+import FinalNav from "@/components/FinalNav";
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -78,7 +78,7 @@ export default function RegisterPage() {
 
     return (
         <>
-            <Navbar />
+            <FinalNav />
             <PageWrapper>
                 <div className={styles.container}>
                     <div className={styles.formBox}>

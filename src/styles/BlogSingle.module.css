@@ -5,15 +5,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-   padding: 40px;
-   overflow: hidden;
+  padding: 40px;
+  overflow: hidden;
 }
 
 .main1 h1 {
   color: white;
- font-size: 70px;
+  font-size: 70px;
   font-weight: 700;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .main2 {
@@ -23,7 +23,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .pImage {
@@ -34,7 +33,6 @@
   transition: transform 0.2s linear;
   position: relative;
   bottom: 45px;
-
 }
 
 .centerImg {
@@ -43,7 +41,6 @@
   z-index: 999;
   top: 50%;
   left: 50%;
- 
 }
 
 .Mainblogsingle {
@@ -60,12 +57,10 @@
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
-
 }
 
 .blogleft {
   width: 100%;
-
 }
 
 .blogmainimg {
@@ -76,7 +71,7 @@
 }
 
 .blogtitle {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   font-family: "Syne", sans-serif;
   margin-bottom: 10px;
@@ -89,7 +84,7 @@
   font-size: 15px;
   color: #ccc;
   margin-bottom: 30px;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .bloginfo span {
@@ -100,21 +95,33 @@
   color: #8e8c8c;
   line-height: 1.7;
   margin-bottom: 25px;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .blogquote {
-  background: #1a1a1a;
+  background: #1a1a1a; /* optional – dark box background */
   padding: 25px;
-  border-left: 4px solid #ce9653;
   font-style: italic;
-  color: #ffd7a6;
+  color: #ff758f;
   margin: 35px 0;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
+  position: relative;
 }
 
+/* Gradient left border */
+.blogquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #860550, #ff758f);
+}
+
+
 .replytitle {
-  font-size: 45px;
+  font-size: 35px;
   margin-top: 40px;
   font-family: "Syne", sans-serif;
   font-weight: 600;
@@ -123,15 +130,14 @@
 .replynote {
   color: #696666;
   margin-bottom: 20px;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .replyform label {
   display: block;
   margin: 15px 0 5px;
   font-size: 18px;
-   font-family: "Syne", sans-serif;
-
+  font-family: "Syne", sans-serif;
 }
 
 .replyform textarea,
@@ -152,31 +158,26 @@
   gap: 20px;
   margin: 30px 0;
   color: #ccc;
-
 }
 
 .check {
   position: relative;
- bottom: 10px;
- left: 10px;
- 
-
+  bottom: 10px;
+  left: 10px;
 }
 
 .checkboxrow input[type="checkbox"] {
   width: 16px;
   height: 16px;
-
 }
 
 .p1 {
   font-size: 17px;
-   font-family: "Syne", sans-serif;
-  
+  font-family: "Syne", sans-serif;
 }
 
 .commentbtn {
-  background: #ce9653;
+  background: linear-gradient(to right, #771658, #52206e);
   padding: 12px 40px;
   border: none;
   border-radius: 25px;
@@ -186,9 +187,12 @@
   font-size: 20px;
   color: #ccc;
   font-family: "Syne", sans-serif;
-
+  transition: 0.3s;
 }
-
+.commentbtn:hover{
+  background: transparent;
+  border: 1px solid #771658;
+}
 
 .blogright {
   padding-top: 20px;
@@ -197,19 +201,16 @@
   position: sticky;
   top: 50px;
   height: fit-content;
-
 }
 
 .recenttitle {
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 25px;
   font-weight: 700;
-   font-family: "Syne", sans-serif;
-
+  font-family: "Syne", sans-serif;
 }
-
 .scrollContainer {
-  height: 150%;
+  height: 450px; /* fixed height better than 150% */
   overflow: hidden;
   position: relative;
   margin-top: 20px;
@@ -218,22 +219,24 @@
 .scrollContent {
   display: flex;
   flex-direction: column;
-  animation: scrollUp 12s linear infinite;
-   font-family: "Syne", sans-serif;
+  animation: scrollUp 80s linear infinite;
+  font-family: "Syne", sans-serif;
+}
 
+.scrollContent:hover {
+  animation-play-state: paused;
 }
 
 .scrollContent p {
   color: grey;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 @keyframes scrollUp {
-  0% {
+  from {
     transform: translateY(0);
   }
-
-  100% {
+  to {
     transform: translateY(-50%);
   }
 }
@@ -245,11 +248,11 @@
   padding: 10px 0;
   border-bottom: 1px solid #3a3a3a;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.02s;
 }
 
 .recentpost:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
 
 .recentpost img {
@@ -264,4 +267,89 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: "Syne", sans-serif;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("/images/blog-main.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* DARK OVERLAY */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjust darkness */
+  z-index: 1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+.contents {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+.contents h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-family: "Syne", sans-serif;
+}
+.contents p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.contentBlock {
+  margin-bottom: 30px;
+}
+
+.blogHeading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.blogpara {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cfcfcf;
+}
+.originPara {
+  color: #a1a1a1;
+  line-height: 1.7;
+  font-family: "Syne", sans-serif;
+  margin: 25px 0;
+  padding-left: 29px; /* blogquote padding match */
+}
+.packageSection{
+  color: #a1a1a1;
+  line-height: 1.7;
+  font-family: "Syne", sans-serif;
+}
+.packageSection ul {
+  list-style: none;
 }

@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Profile.module.css";
+import FinalNav from "@/components/FinalNav";
 
 export default function ProfilePage() {
     const { data: session, status } = useSession();
@@ -141,7 +141,7 @@ export default function ProfilePage() {
 
     return (
         <>
-            <Navbar />
+            <FinalNav/>
             <PageWrapper>
                 <div className={styles.container}>
                     <h1 className={styles.title}>My Profile</h1>

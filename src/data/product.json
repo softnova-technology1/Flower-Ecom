@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "title": "Gerbera Daisies (非洲菊 Fēizhōu jú)",
+    "price": 80,
+    "color": "orange",
+    "type": "bouquet",
+    "featured": true,
+    "image": "/images/flow5.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 2,
+    "title": "Ranunculus (花毛茛 Huā máogèn)",
+    "price": 90,
+    "color": "red",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow11.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 3,
+    "title": "Sunflower (向日葵 Xiàng rì kuí)",
+    "price": 60,
+    "color": "orange",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow12.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 4,
+    "title": "Roses (玫瑰 Méiguī)",
+    "price": 53,
+    "color": "pink",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow10.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 5,
+    "title": "Carnation (康乃馨 Kāng nǎi xīn)",
+    "price": 100,
+    "color": "white",
+    "type": "bouquet",
+    "featured": true,
+    "image": "/images/flow4.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 6,
+    "title": "Hydrangea (绣球花 Xiù qiú huā)",
+    "price": 81,
+    "color": "mixed",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow6.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 7,
+    "title": "Lily (百合花 Bǎi hé huā)",
+    "price": 99,
+    "color": "white",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow7.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 8,
+    "title": "Phalaenopsis Orchids (蝴蝶兰 Húdiélán)",
+    "price": 71,
+    "color": "white",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow8.jpg",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 9,
+    "title": "Peonies (蝴蝶兰 Húdiélán)",
+    "price": 59,
+    "color": "pink",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow9.jpg",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 10,
+    "title": "Tulip (郁金香 Yùjīnxiāng)",
+    "price": 65,
+    "color": "red",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow13.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+
+  {
+    "id": 11,
+    "title": "Golden Sunrise",
+    "price": 84,
+    "color": "yellow",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow14.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 12,
+    "title": "Baby Pink Rose Varmala Wedding Garland (浅浅粉玫瑰花环) Qiǎn Fěn Méiguī Huāhuán",
+    "price": 97,
+    "color": "red",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow15.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 13,
+    "title": "Peacock Varmala (Wedding Garland)(孔雀花环) Kǒngquè Huāhuán",
+    "price": 88,
+    "color": "white",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow16.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 14,
+    "title": "Yellow Rose Varmala Wedding Garland (黄玫瑰花环) Huáng Méiguī Huāhuán",
+    "price": 73,
+    "color": "orange",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow3.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 15,
+    "title": "Tulasi Maalai (圣罗勒花环)  Shèng Luólè Huāhuán (Holy Tulasi Garland)",
+    "price": 69,
+    "color": "pink",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/flow2.png",
+
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 16,
+    "title": "Velvet Bloom",
+    "price": 92,
+    "color": "purple",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/velvet-bloom.jpg",
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 17,
+    "title": "Fresh Meadow",
+    "price": 57,
+    "color": "green",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/fresh-meadow",
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  },
+  {
+    "id": 18,
+    "title": "Royal Petals",
+    "price": 105,
+    "color": "mixed",
+    "type": "bouquet",
+    "featured": false,
+    "image": "/images/royal-petals .jpg",
+    "description": "White carnations symbolizing purity and good luck.",
+    "composition": "20 white carnations with green fillers.",
+    "delivery": "Next-day delivery in temperature-controlled packaging."
+  }
+]

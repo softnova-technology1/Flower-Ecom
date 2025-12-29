@@ -30,7 +30,7 @@ export default function Navbar() {
                         <nav className={styles.navLinks}>
                             <Link href="/">Home</Link>
                             <Link href="/about">About</Link>
-                            <Link href="/products">Products</Link>
+                            <Link href="/products">Shop</Link>
 
                             <div className={styles.dropdown}>
                                 <span

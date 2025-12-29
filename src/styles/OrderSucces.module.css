@@ -57,12 +57,12 @@
 }
 
 .homeBtn {
-  background: #9e6d04;
+  background: linear-gradient(to right,#771658, #52206E);
   color: white;
 }
 
 .orderBtn {
- background: #9e6d04;
+  background: linear-gradient(to right,#771658, #52206E);
   color: white;
 }
 .homeBtn,
@@ -72,7 +72,7 @@
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  background: #9e6d04;
+  background: linear-gradient(to right,#771658, #52206E);
   color: white;
   position: relative;
   overflow: hidden;
