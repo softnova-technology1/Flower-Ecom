@@ -22,19 +22,26 @@ const Footer = () => {
             <FaWhatsapp />
           </div>
         </div>
-
-        {/* Categories */}
         <div className={styles.column}>
           <h4>Categories</h4>
-          <ul>
-            <li>About Us</li>
-            <li>Catalog</li>
-            <li>Contact</li>
-            <li>Blog</li>
-            <li>Faq</li>
+          <ul className={styles.listRs}>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/products">Shop</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/faq">FAQ</Link>
+            </li>
           </ul>
         </div>
-
         {/* Support */}
         <div className={styles.column}>
           <h4>Support</h4>
@@ -50,7 +57,6 @@ const Footer = () => {
             <li>Wishlist</li>
           </ul>
         </div>
-
         {/* Contact */}
         <div className={styles.column}>
           <h4>Contact</h4>

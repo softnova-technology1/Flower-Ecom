@@ -106,7 +106,7 @@ export default function BlogSinglePage() {
   return (
     <>
       <ScrollToTop />
-      <FinalNav/> 
+      <FinalNav />
       <section>
         <div className={styles.hero}>
           <Container>
@@ -259,6 +259,23 @@ export default function BlogSinglePage() {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+            </div>
+
+            <div className={styles.CareTips}>
+                    <h1>Care Tips For {post.title}</h1>
+                    <p>{post.careContent}</p>
+                    <ul className={styles.Tips}>
+                    {
+                      post.CareTips.map((item)=>(
+                        <li>{item.Tip}</li>
+                      ))
+                    }
+                    </ul>
+            </div>
+            <div className={styles.Culture}>
+                    <h1>Cultural Significance</h1>
+
+              <p>{post.Culture}</p>
             </div>
           </div>
 

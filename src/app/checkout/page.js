@@ -432,13 +432,6 @@ export default function Checkout() {
             〉<span className={step >= 2 ? styles.active : ""}>SHIPPING</span>{" "}
             〉<span className={step === 3 ? styles.active : ""}>PAYMENT</span>
           </div>
-          <div className={styles.loginBanner}>
-            <p>
-              Already have an account?{" "}
-              <span className={styles.loginLink}>Log in</span> for faster
-              checkout
-            </p>
-          </div>
 
           {/* STEP 1 TITLE */}
           <p className={step === 1 ? styles.title : styles.stepDisabled}>

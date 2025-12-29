@@ -118,245 +118,270 @@
   }
 } */
 
+/* ================= PAGE ================= */
 .wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1c22, #000);
   display: flex;
-  gap: 40px;
-  padding: 30px 40px;
-  font-family: Arial, sans-serif;
+  gap: 60px;
+  padding: 80px 60px;
+  color: #fff;
+  font-family: "Syne", sans-serif;
 }
 
+/* ================= LEFT ================= */
 .left {
-  width: 55%;
+  width: 60%;
 }
 
+/* Breadcrumb */
 .breadcrumb {
   font-size: 12px;
   color: #777;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .active {
-  color: #000;
+  color: #c45bbd;
   font-weight: 600;
 }
 
+/* Step titles */
 .title {
-  font-size: 18px;
-  margin: 20px 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 28px 0 18px;
 }
 
 .stepDisabled {
-  font-size: 18px;
-  margin: 20px 0;
-  color: #c9c9c9;
+  font-size: 15px;
+  color: #444;
+  margin: 28px 0 18px;
 }
 
+/* ================= INPUTS ================= */
 .inputBox {
-  position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .input {
   width: 100%;
-  padding: 12px;
-  /* border-radius: 7px; */
-  border: 1px solid #d5d5d5;
-  
+  padding: 15px 14px;
+  background: #0b0c10;
+  border: 1px solid #2a2c34;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: #666;
 }
 
 .inputError {
-  border-color: #ff3b3b;
+  border-color: #ff5b5b;
 }
 
 .error {
-  font-size: 13px;
-  color: #ff3b3b;
+  font-size: 12px;
+  color: #ff5b5b;
   margin-top: 6px;
 }
 
+/* Date & time */
 .twoInputs {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   margin-bottom: 18px;
 }
 
 .twoInputs input {
   width: 100%;
-  padding: 12px;
-  border-radius: 7px;
-  border: 1px solid #d5d5d5;
+  padding: 15px;
+  background: #0b0c10;
+  border: 1px solid #2a2c34;
+  border-radius: 8px;
+  color: #fff;
 }
 
+/* ================= BUTTONS ================= */
 .button {
   width: 100%;
-  padding: 14px;
-  background: linear-gradient(90deg, #7a3b82, #c24aa8, #994fa3);
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+
+  background: linear-gradient(100deg, #873cb0, #fc09af);
   border: none;
-  border-radius: 6px;
   color: #fff;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
-  /* margin-top: 20px; */
+
+  transition: all 0.3s ease;
 }
 
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Completed step */
 .doneBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 0;
 }
 
 .titleDone {
-  color: #198754;
-  font-weight: 600;
   display: flex;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
+  color: #7dffb3;
+  font-size: 14px;
 }
 
 .edit {
   cursor: pointer;
+  opacity: 0.7;
 }
 
+/* Divider */
 .line {
-  margin: 20px 0;
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #2a2c34;
+  margin: 22px 0;
 }
 
-/* PAYMENT */
-.purchaseButton {
-  width: 100%;
-  padding: 14px;
-  background: black;
-  color: white;
-  /* border-radius: 7px; */
-  border: none;
-  cursor: pointer;
+/* ================= PAYMENT ================= */
+.paymentSection {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
+
 .payButton1 {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 14px;
-  background: rgb(255, 255, 255);
-  color: rgb(10, 10, 10);
-  /* border-radius: 7px; */
-  border: 1px solid black;
-  cursor: pointer;
-  margin-bottom: 10px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
 }
 
-/* RIGHT SUMMARY */
-.rightBox {
-  width: 40%;
-  background: #f9f9f9;
-  padding: 25px;
+.purchaseButton {
+  padding: 15px;
   border-radius: 10px;
-  position: sticky;
-  top: 30px;
+  background: linear-gradient(135deg, #9d3ea8, #7d2b86);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ================= RIGHT SUMMARY ================= */
+.rightBox {
+  width: 35%;
+  background: linear-gradient(180deg, #1f2129, #14151a);
+  border-radius: 18px;
+  padding: 28px;
+  height: fit-content;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 .summaryTitle {
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 22px;
 }
 
+/* Product row */
 .productBox {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
 .productBox img {
-  width: 90px;
-  height: 90px;
-  border-radius: 8px;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 .productName {
-  font-weight: 600;
+  font-size: 13px;
 }
 
 .price {
   margin-left: auto;
-  font-weight: bold;
+  font-size: 14px;
 }
 
+/* Gift card */
+.giftText {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.giftContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.giftInput {
+  flex: 1;
+  padding: 12px;
+  background: #0b0c10;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.giftButton {
+  padding: 12px 18px;
+  background: #2b2d36;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Totals */
 .rows,
 .totalRow {
   display: flex;
   justify-content: space-between;
-  margin-top: 12px;
+  margin-top: 14px;
+  font-size: 14px;
 }
 
 .totalRow {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 600;
 }
 
+/* Secure */
 .secure {
   text-align: center;
-  margin-top: 25px;
   font-size: 12px;
-  color: #777;
+  color: #aaa;
+  margin-top: 16px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
   .wrapper {
     flex-direction: column;
+    padding: 40px 18px;
   }
 
   .left,
   .rightBox {
     width: 100%;
   }
-
-  .rightBox {
-    position: static;
-  }
-}
-.giftText {
-  font-size: 14px;
-  margin-bottom: 12px;
-  color: #444;
-}
-
-.giftContainer {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.giftInput {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid #ccc;
-  /* border-radius: 4px; */
-}
-
-.giftButton {
-  padding: 12px 24px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.loginBanner {
-  background: #d9d9dc;
-  padding: 25px;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.loginBanner p {
-  font-size: 15px;
-  color: #222;
-}
-
-.loginLink {
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: 500;
 }

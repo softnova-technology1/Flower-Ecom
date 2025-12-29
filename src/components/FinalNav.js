@@ -30,7 +30,7 @@ export default function FinalNav() {
               About Us
             </Link>
             <Link href="/products" className={styles.navLink}>
-              Catalog
+             Shop
             </Link>
             <Link href="/contact" className={styles.navLink}>
               Contacts
@@ -159,7 +159,7 @@ export default function FinalNav() {
               className="nav-link"
               data-bs-dismiss="offcanvas"
             >
-              Catalog
+              Shop
             </Link>
             <Link
               href="/contacts"

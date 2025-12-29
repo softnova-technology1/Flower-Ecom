@@ -364,13 +364,11 @@ export default function ProductDetails() {
   return (
     <>
       <FinalNav />
-
       <div className={styles.productPage}>
         <p className={styles.breadcrumb}>
           <Link href="/">Home</Link> / <Link href="/catalog">Catalog</Link> /{" "}
           <span>{product.title}</span>
         </p>
-
         <div className={styles.productGrid}>
           <div className={styles.imageBox}>
             <img src={product.image} alt={product.title} />

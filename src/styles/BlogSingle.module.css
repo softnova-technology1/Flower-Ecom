@@ -119,7 +119,6 @@
   background: linear-gradient(to bottom, #860550, #ff758f);
 }
 
-
 .replytitle {
   font-size: 35px;
   margin-top: 40px;
@@ -189,7 +188,7 @@
   font-family: "Syne", sans-serif;
   transition: 0.3s;
 }
-.commentbtn:hover{
+.commentbtn:hover {
   background: transparent;
   border: 1px solid #771658;
 }
@@ -322,7 +321,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-
 .contentBlock {
   margin-bottom: 30px;
 }
@@ -345,11 +343,32 @@
   margin: 25px 0;
   padding-left: 29px; /* blogquote padding match */
 }
-.packageSection{
+.packageSection {
   color: #a1a1a1;
   line-height: 1.7;
   font-family: "Syne", sans-serif;
 }
 .packageSection ul {
   list-style: none;
+}
+
+/* }care tips */
+
+.CareTips{
+  margin-top: 5rem;
+  font-family: "Syne", sans-serif;
+}
+.Culture h1{
+  font-family: "Syne", sans-serif;
+  color: white;
+}
+.CareTips p ,.Culture p{
+  color: #a1a1a1;
+  line-height: 1.7;
+  padding-top: 3rem;
+}
+.Tips li {
+  color: #a1a1a1;
+  line-height: 1.7;
+  margin-left: 3rem;
 }

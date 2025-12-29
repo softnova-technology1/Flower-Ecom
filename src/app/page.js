@@ -63,7 +63,7 @@ export default function Home() {
                     <Offcanvas.Body>
                       <div className={styles.Offlinks}>
                         <Link href="/about">About</Link>
-                        <Link href="/products">Products</Link>
+                        <Link href="/products">Shop</Link>
                         <Link href="/blog">Blog</Link>
                         <Link href="/faq">FAQ</Link>
                         <Link href="/contact">Contact</Link>
