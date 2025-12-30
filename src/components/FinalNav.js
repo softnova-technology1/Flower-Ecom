@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
 import Link from "next/link";
 import styles from "../styles/FinalNav.module.css";
 import LoginPop from "@/components/LoginPop";
@@ -9,6 +8,8 @@ import SignupPop from "@/components/SignupPop";
 import ResetPop from "@/components/ResetPop";
 export default function FinalNav() {
   const [popup, setPopup] = useState(null);
+
+  
   return (
     <>
       <nav className={styles.navbar}>

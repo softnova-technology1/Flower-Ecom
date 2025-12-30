@@ -406,7 +406,7 @@ export default function ProductDetails() {
               </button>
               <div className={styles.btnWrap}>
                 {" "}
-                <button className={styles.seeMore}>Wishlist</button>{" "}
+                <button className={styles.seeMore}>See More</button>{" "}
               </div>
               <div className={styles.btnWrap}>
                 <button className={styles.addToBag} onClick={handleAddToBag}>
