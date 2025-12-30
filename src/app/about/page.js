@@ -36,6 +36,14 @@ export default function AboutPage() {
                 Add comfort and elegance to your home with beautifully crafted
                 fresh flower bouquets
               </p>
+              <div className={styles.btnWrap}>
+                <button
+                  className={styles.btn}
+                  onClick={() => router.push("/products")}
+                >
+                  Shop →
+                </button>
+              </div>
             </div>
           </Container>
         </div>

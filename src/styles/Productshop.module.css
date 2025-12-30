@@ -80,10 +80,9 @@
   padding-top: 10px;
   font-size: 14px;
   opacity: 0.85;
-  
 }
-.catafoot{
-  color: #D96FD9;
+.catafoot {
+  color: #d96fd9;
 }
 /* Pagination */
 .catalogPagination {
@@ -102,12 +101,12 @@
 }
 
 .activePage {
-  background: #c89b3c;
+  background: linear-gradient(80deg, #9d3ea8, #e467f4);
   color: #000;
 }
 
 .pageArrow {
-  background: #e29841;
+  background: linear-gradient(80deg, #9d3ea8, #e467f4);
   color: #000;
   border: none;
   padding: 8px 12px;
