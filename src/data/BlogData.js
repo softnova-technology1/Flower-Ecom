@@ -19,22 +19,23 @@ export const blogData = [
 
     CareTips: [
       {
-        Tip: "Trim stems at an angle every two days.",
-
+        Tip: "Trim stems at an angle before placing in fresh water",
       },
       {
-        Tip: "Change water regularly to prevent bacterial growth.",
-
+        Tip: "Use a sturdy, clean vase with plenty of water",
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Change water every 1–2 days to maintain freshness",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Keep in a cool area, away from direct sunlight and heat",
+      },
+      {
+        Tip: "Remove leaves below the waterline to prevent bacteria",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion,gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorativefloral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Gerbera Daisies (非洲菊 Fēizhōu jú)",
@@ -51,24 +52,25 @@ export const blogData = [
     symbolic: [
       "Gerbera Daisies are loved for their long-lasting freshness and versatility, symbolizing cheer, gratitude, and genuine affection in every petal. Perfect for bouquets, centerpieces, and decorative arrangements alike, their vibrant presence enhances celebrations, events, and everyday moments. A flower that spreads happiness, warmth, and unforgettable memories, gerberas remain a delightful choice for any occasion.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your gerbera daisies bright and cheerful, provide them with fresh water and change it every two days. Trim the stems at an angle to improve water absorption. Place them in a cool spot, away from direct sunlight, heat, and ripening fruits to ensure they stay vibrant for longer.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Gerbera daisies are admired for their bright, cheerful colors and playful charm. They symbolize happiness, innocence, and purity of heart, making them perfect for bouquets, floral arrangements, and decorative displays. Their vibrant presence brings joy to weddings, celebrations, and everyday moments, remaining a flower that is lively, meaningful, and unforgettable.",
   },
   {
     title: "Hydrangea (绣球花 Xiù qiú huā)",
@@ -85,24 +87,25 @@ export const blogData = [
     symbolic: [
       "Hydrangeas are loved for their versatility and long-lasting freshness, symbolizing gratitude, understanding, and heartfelt emotion in every cluster. Perfect for bouquets, centerpieces, or decorative arrangements alike, their presence enhances events, celebrations, and even everyday spaces with grace. A flower that embodies sophistication, emotion, and unforgettable beauty, hydrangeas remain a timeless and elegant choice for any occasion.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your hydrangeas lush and vibrant, make sure they receive plenty of water, as they are highly thirsty flowers. Change the water every two days and trim the stems at an angle to improve water uptake. Keep them in a cool area, away from direct sunlight, heat, and ripening fruits to maintain their full, beautiful blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Hydrangeas are admired for their lush, full blooms and delicate beauty. They symbolize gratitude, understanding, and heartfelt emotions, making them perfect for bouquets, arrangements, and decorative displays. Their elegant presence enhances weddings, special occasions, and everyday moments, remaining a flower that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Lily (百合花 Bǎi hé huā)",
@@ -119,24 +122,25 @@ export const blogData = [
     symbolic: [
       "Lilies are admired for their long-lasting freshness and versatile appeal, representing purity, devotion, and heartfelt emotion in every petal. Perfect for bouquets, centerpieces, or decorative arrangements alike, their presence enhances events, celebrations, and everyday moments with elegance. A flower that embodies grace, emotion, and timeless beauty, lilies leave a lasting impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your lilies fresh and fragrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep lilies in a cool area, away from direct sunlight, heat sources, and ripening fruits to preserve their blooms and fragrance.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Lilies are celebrated for their exquisite beauty and graceful form. They symbolize purity, renewal, and refined elegance, making them ideal for bouquets, floral arrangements, and decorative displays. Their timeless charm enhances weddings, special occasions, and everyday moments, remaining a flower that is sophisticated, meaningful, and unforgettable.",
   },
   {
     title: "Phalaenopsis Orchids (蝴蝶兰 Húdiélán)",
@@ -153,24 +157,28 @@ export const blogData = [
     symbolic: [
       "Phalaenopsis Orchids are cherished for their versatility and long-lasting charm, symbolizing love, admiration, and delicate beauty in every bloom. Perfect for bouquets, centerpieces, or ornamental arrangements alike, their presence elevates events, celebrations, and even everyday spaces with poise. A flower that embodies sophistication, elegance, and unforgettable allure, Phalaenopsis Orchids leave a lasting impression.",
     ],
-     CareTips: [
-      {
-        Tip: "Trim stems at an angle every two days.",
+    careContent:
+      "To keep your Phalaenopsis orchids healthy and blooming, water them moderately, allowing the potting medium to dry slightly between waterings. Avoid overwatering, as this can cause root rot. Place your orchids in bright, indirect sunlight and maintain a humid environment for optimal growth. Keep them away from drafts and ripening fruits to protect their delicate flowers.",
 
+    CareTips: [
+      {
+        Tip: "Water moderately and let the medium dry slightly between waterings.",
       },
       {
-        Tip: "Change water regularly to prevent bacterial growth.",
-
+        Tip: "Avoid overwatering to prevent root rot.",
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Place in bright, indirect sunlight.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Maintain humidity around the plant for healthy blooms.",
+      },
+      {
+        Tip: "Keep away from drafts and ripening fruits that release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Phalaenopsis orchids, are admired for their elegant, butterfly-like blooms and delicate sophistication. They symbolize beauty, refinement, and thoughtfulness, making them perfect for bouquets, decorative arrangements, and special gifts. Their graceful presence elevates weddings, celebrations, and everyday moments, remaining a flower that is luxurious, meaningful, and unforgettable.",
   },
   {
     title: "Peonies (蝴蝶兰 Húdiélán)",
@@ -187,24 +195,25 @@ export const blogData = [
     symbolic: [
       "Peonies are admired for their long-lasting freshness and versatile appeal, symbolizing romance, prosperity, and heartfelt emotion in every petal. Ideal for bouquets, centerpieces, or decorative arrangements alike, their presence elevates celebrations, events, and everyday spaces with beauty. A flower that embodies elegance, emotion, and timeless allure, peonies leave an unforgettable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your peonies fresh and vibrant, provide them with plenty of water and change it every two days Trim the stems at an angle to help them absorb water better. Keep them in a cool spot, away from direct sunlight, heat sources, and ripening fruits to maintain their lush, full blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Peonies are cherished for their lush, full blooms and captivating fragrance. They symbolize prosperity, romance, and honor, making them perfect for bouquets, decorative arrangements, and festive occasions. Their majestic presence enhances weddings, celebrations, and everyday moments, remaining a flower that is elegant, meaningful, and unforgettable.",
   },
   {
     title: "Ranunculus (花毛茛 Huā máogèn)",
@@ -221,24 +230,25 @@ export const blogData = [
     symbolic: [
       "Ranunculus are admired not only for their stunning beauty but also for their long-lasting freshness and versatility. Perfect for bouquets, decorative arrangements, or as standalone blooms, they bring elegance, color, and charm to every setting. These flowers symbolize radiant charm, attractiveness, and heartfelt emotions, making them a timeless choice for meaningful gifts or luxurious floral displays. Their presence enhances events, celebrations, and everyday moments with grace and sophistication.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your ranunculus flowers bright and full, provide them with fresh water and change it every two days. Trim the stems at an angle to help them absorb water effectively. Keep them in a cool area, away from direct sunlight, heat, and ripening fruits, to maintain their vibrant, layered blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Ranunculus flowers are admired for their layered, delicate petals and vibrant colors. They symbolize charm, attractiveness, and radiant beauty, making them ideal for bouquets, decorative arrangements, and special gifts. Their graceful presence brightens weddings, celebrations, and everyday moments, remaining a flower that is lively, meaningful, and unforgettable.",
   },
   {
     title: "Roses (玫瑰 Méiguī)",
@@ -255,24 +265,25 @@ export const blogData = [
     symbolic: [
       "Roses are admired for their long-lasting freshness and timeless appeal. They add depth, texture, and elegance to bouquets, centerpieces, and decorative arrangements alike. A flower that embodies beauty, love, and heartfelt emotion, roses leave a lasting impression and are cherished across cultures and generations.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your roses fresh, fragrant, and long-lasting, provide them with plenty of clean water and change it every two days. Trim the stems at an angle to improve water absorption. Keep them in a cool spot, away from direct sunlight, heat sources, and ripening fruits to preserve their blooms and vibrant color.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Roses are celebrated for their timeless beauty and captivating fragrance. They symbolize love, passion, and admiration, making them perfect for bouquets, decorative arrangements, and meaningful gifts. Their elegant presence enhances weddings, celebrations, and everyday moments, remaining a flower that is classic, meaningful, and unforgettable.",
   },
   {
     title: "Sunflower (向日葵 Xiàng rì kuí)",
@@ -289,24 +300,25 @@ export const blogData = [
     symbolic: [
       "Sunflowers are admired for their long-lasting freshness and versatile appeal. They represent happiness, loyalty, and adoration in every bloom. Perfect for bouquets, centerpieces, or decorative arrangements, they enhance celebrations, events, and everyday spaces with joy and elegance. A flower that embodies brightness, cheer, and unforgettable charm, sunflowers leave a lasting impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your sunflowers bright and cheerful, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Place them in a cool area, away from direct sunlight, heat sources, and ripening fruits to ensure their vibrant blooms last longer.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
-        Tip: "Change water regularly to prevent bacterial growth.",
-
+        Tip: "Change water regularly to prevent bacterial growth",
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Sunflowers are admired for their bright, sunny appearance and uplifting charm. They symbolize happiness, loyalty, and positivity, making them perfect for bouquets, decorative arrangements, and joyful gifts. Their radiant presence enhances celebrations, special occasions, and everyday moments, remaining a flower that is cheerful, meaningful, and unforgettable.",
   },
   {
     title: "Tulip (郁金香 Yùjīnxiāng)",
@@ -323,24 +335,25 @@ export const blogData = [
     symbolic: [
       "Tulips are admired for their long-lasting freshness and refined simplicity. They symbolize love, grace, and positivity in every bloom. Perfect for bouquets, decorative arrangements, or centerpieces, tulips enhance celebrations, events, and everyday spaces with elegance and warmth. A flower that embodies beauty, emotion, and timeless charm, tulips leave a memorable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your tulips fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Keep tulips in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain their elegant blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Tulips are celebrated for their vibrant colors and graceful form. They symbolize love, renewal, and cheerful emotions, making them perfect for bouquets, decorative arrangements, and thoughtful gifts. Their elegant presence enhances weddings, celebrations, and everyday moments, remaining a flower that is timeless, meaningful, and unforgettable.",
   },
   {
     title: "Alstroemeria (六出花 Liù chū huā)",
@@ -357,24 +370,25 @@ export const blogData = [
     symbolic: [
       "Alstroemeria is admired for its long-lasting freshness and versatility. It symbolizes friendship, devotion, and heartfelt emotion in every bloom. Perfect for bouquets, decorative arrangements, or floral displays, it adds elegance, charm, and a touch of sophistication to any setting. A flower that embodies beauty, warmth, and enduring appeal, Alstroemeria leaves a memorable impression wherever it is displayed.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Alstroemeria flowers fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool spot, away from direct sunlight, heat sources, and ripening fruits, to maintain their long-lasting, colorful blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Alstroemeria, also known as the Peruvian lily, is admired for its vibrant colors and intricate patterns. It symbolizes friendship, devotion, and mutual support, making it perfect for bouquets, decorative arrangements, and meaningful gifts. Its lively presence enhances celebrations, special occasions, and everyday moments, remaining a flower that is cheerful, meaningful, and unforgettable.",
   },
   {
     title: "Baby’s Breath (满天星 Mǎn tiān xīng)",
@@ -391,24 +405,25 @@ export const blogData = [
     symbolic: [
       "Baby’s Breath is admired for its long-lasting freshness and effortless versatility. Symbolizing purity, love, and innocence, it is perfect for bouquets, centerpieces, and decorative arrangements alike. Its presence enhances events, celebrations, and even everyday spaces with delicate charm. A flower that embodies grace, elegance, and timeless beauty, Baby’s Breath leaves a gentle and unforgettable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Baby’s Breath fresh and airy, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain their delicate, cloud-like blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Baby’s Breath is admired for its tiny, cloud-like blooms and delicate charm. It symbolizes purity, everlasting love, and innocence, making it perfect for bouquets, decorative arrangements, and meaningful accents in floral designs. Its gentle presence enhances weddings, celebrations, and everyday moments, remaining a flower that is soft, meaningful, and unforgettable.",
   },
   {
     title: "Caspia (霞草 Xiá cǎo)",
@@ -425,24 +440,25 @@ export const blogData = [
     symbolic: [
       "Caspia is admired for its long-lasting freshness and adaptability in floral designs. Symbolizing elegance, tranquility, and subtle beauty, it is perfect for bouquets, centerpieces, or decorative accents. Its presence enhances events, celebrations, and even everyday spaces with delicate charm. A flower that embodies lightness, sophistication, and timeless appeal, Caspia leaves a memorable impression wherever it is used.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Caspia flowers fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to maintain their delicate, airy blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Caspia is admired for its delicate, airy clusters of tiny blooms and subtle elegance. It symbolizes remembrance, grace, and lasting beauty, making it perfect for bouquets, decorative arrangements, and thoughtful gifts. Its refined presence enhances weddings, celebrations, and everyday moments, remaining a flower that is gentle, meaningful, and unforgettable.",
   },
   {
     title: "Delphinium (飞燕草 Fēiyàn cǎo)",
@@ -459,24 +475,25 @@ export const blogData = [
     symbolic: [
       "Delphinium is admired for its long-lasting freshness and expressive beauty. Representing admiration, positivity, and heartfelt emotion, it is perfect for bouquets, centerpieces, and decorative arrangements alike. Its presence elevates celebrations, events, and everyday spaces with elegance and confidence. A flower that embodies strength, grace, and timeless appeal, delphinium leaves a lasting impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Delphinium flowers fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Place them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to maintain their tall, striking, and colorful blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Delphiniums are admired for their tall, striking spikes and vibrant colors. They symbolize positivity, dignity, and a sense of lightness, making them perfect for bouquets, decorative arrangements, and special gifts. Their elegant presence enhances weddings, celebrations, and everyday moments, remaining a flower that is uplifting, meaningful, and unforgettable.",
   },
   {
     title: "Freesia (小苍兰 Xiǎo cānglán)",
@@ -493,24 +510,25 @@ export const blogData = [
     symbolic: [
       "Freesia is cherished for its long-lasting freshness and unforgettable fragrance. Representing trust, friendship, and thoughtfulness, it is perfect for bouquets, centerpieces, and decorative floral displays. Its presence enhances special occasions and everyday spaces with freshness and charm. A flower that embodies purity, fragrance, and timeless beauty, freesia leaves a lasting and uplifting impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Freesia flowers fresh and fragrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to maintain their delicate, colorful, and aromatic blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Freesias are admired for their delicate, fragrant blooms and graceful charm. They symbolize innocence, trust, and thoughtfulness, making them perfect for bouquets, decorative arrangements, and meaningful gifts. Their elegant presence enhances weddings, celebrations, and everyday moments, remaining a flower that is gentle, meaningful, and unforgettable.",
   },
   {
     title: "Spray Rose 喷雾玫瑰 (Pēnwù méi guī)",
@@ -527,24 +545,25 @@ export const blogData = [
     symbolic: [
       "Spray Roses are admired for their long-lasting freshness and versatile appeal. Representing happiness, appreciation, and heartfelt emotion, they are perfect for bouquets, centerpieces, and decorative arrangements alike. Their clustered blooms enhance events, celebrations, and everyday spaces with elegance and warmth. A flower that embodies charm, softness, and timeless romance, spray roses leave a lasting impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your spray roses fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to preserve their delicate clusters of blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Spray Roses are admired for their delicate clusters of small blooms and graceful charm. They symbolize love, admiration, and thoughtfulness, making them perfect for bouquets, decorative arrangements, and meaningful gifts. Their elegant presence enhances weddings, celebrations, and everyday moments, remaining a flower that is tender, meaningful, and unforgettable.",
   },
   {
     title: "Foliage Leaves树叶 (Shù yè)",
@@ -561,24 +580,25 @@ export const blogData = [
     symbolic: [
       "Foliage leaves are admired for their durability and versatile appeal. Symbolizing growth, freshness, and renewal, they add life and balance to floral designs. Perfect for weddings, events, and everyday arrangements, foliage elevates spaces with natural beauty and elegance. A timeless element in floristry, foliage leaves enhance every arrangement with texture, harmony, and lasting charm.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your foliage leaves fresh and vibrant, provide them with plenty of water and change it every twodays. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain their lush green appearance.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Foliage leaves are admired for their lush greenery and natural elegance. They symbolize growth, harmony, and renewal, making them perfect for bouquets, floral arrangements, and decorative accents. Their vibrant presence enhances weddings, celebrations, and everyday moments, remaining an element that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Dusty Miller 银叶菊 (Yín yè jú)",
@@ -595,24 +615,25 @@ export const blogData = [
     symbolic: [
       "Dusty Miller is valued for its durability and long-lasting freshness. Symbolizing calmness, protection, and subtle beauty, it is perfect for bouquets, centerpieces, and decorative arrangements. Its silvery foliage enhances celebrations, special occasions, and everyday spaces with a soft, luxurious feel. A classic foliage choice, Dusty Miller adds elegance, texture, and lasting appeal to every floral creation.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Dusty Miller fresh and silvery, provide it with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep Dusty Miller in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain its soft, silvery foliage.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Dusty Miller is admired for its soft, silvery foliage and subtle elegance. It symbolizes resilience, sophistication, and understated beauty, making it perfect for bouquets, decorative arrangements, and complementary accents. Its refined presence enhances weddings, celebrations, and everyday moments, remaining an element that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Eucalyptus 桉树 (Ān shù)",
@@ -629,24 +650,25 @@ export const blogData = [
     symbolic: [
       "Eucalyptus is valued for its long-lasting freshness and versatile appeal. Symbolizing healing, protection, and renewal, it is perfect for bouquets, centerpieces, and ornamental arrangements alike. Its presence enhances celebrations, special occasions, and everyday spaces with a soothing, refined elegance. A timeless foliage choice, eucalyptus leaves a lasting impression with its natural beauty and calming essence.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your eucalyptus fresh and aromatic, provide it with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep eucalyptus in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain its fragrant, silvery-green foliage.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Eucalyptus is admired for its aromatic, silvery-green leaves and calming presence. It symbolizes protection, healing, and renewal, making it perfect for bouquets, decorative arrangements, and thoughtful accents. Its serene presence enhances weddings, celebrations, and everyday moments, remaining an element that is soothing, meaningful, and unforgettable.",
   },
   {
     title: "Green Ball (绿绒球 Lǜ róng qiú)",
@@ -663,24 +685,25 @@ export const blogData = [
     symbolic: [
       "Green Ball is valued for its durability and long-lasting freshness, making it a reliable choice for both decorative and celebratory arrangements. Symbolizing renewal, harmony, and positive energy, it fits perfectly into bouquets, centerpieces, and contemporary installations. A versatile accent flower, Green Ball elevates every arrangement with its unique texture and refreshing elegance.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Green Ball flowers fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain their round, lush appearance.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Green Ball is admired for its vibrant, spherical blooms and unique texture. It symbolizes harmony, vitality, and abundance, making it perfect for bouquets, decorative arrangements, and thoughtful accents. Its striking presence enhances weddings, celebrations, and everyday moments, remaining an element that is lively, meaningful, and unforgettable.",
   },
   {
     title: " Panicum (柳枝草 Liǔ zhī cǎo)",
@@ -697,24 +720,25 @@ export const blogData = [
     symbolic: [
       "Panicum is valued for its durability and long-lasting beauty, making it a favorite for decorative arrangements and installations. Symbolizing harmony, simplicity, and natural elegance, it complements a wide range of floral compositions. A timeless filler, Panicum elevates designs with effortless grace and refined texture.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Panicum fresh and airy, provide it with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep Panicum in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain its delicate, feathery appearance.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Panicum is admired for its delicate, wispy stems and graceful movement. It symbolizes flexibility, elegance, and tranquility, making it perfect for bouquets, decorative arrangements, and subtle accents. Its gentle presence enhances weddings, celebrations, and everyday moments, remaining an element that is refined, meaningful, and unforgettable.",
   },
   {
     title: "Ammi Majus(白花蛇舌草 Báihuāshéshé cǎo)",
@@ -731,24 +755,25 @@ export const blogData = [
     symbolic: [
       "Ammi Majus is valued for its long-lasting freshness and versatile use in floral arrangements. Symbolizing protection, elegance, and delicacy, it adds subtle beauty and balance to every bouquet. Ideal for centerpieces, bouquets, or decorative accents, Ammi Majus enhances celebrations, events, and everyday spaces with its refined charm. A flower that embodies grace, delicacy, and timeless sophistication, it leaves a gentle yet memorable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Ammi Majus flowers fresh and delicate, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Place them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to maintain their airy, lacy blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Ammi Majus is admired for its delicate, lacy white blooms and subtle elegance. It symbolizes protection, clarity, and gentle beauty, making it ideal for bouquets, decorative arrangements, and thoughtful gifts. Its refined presence enhances weddings, celebrations, and everyday moments, remaining a flower that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Eustoma / Lisianthus (桔梗花 Júgěng huā)",
@@ -765,24 +790,25 @@ export const blogData = [
     symbolic: [
       "Eustoma is cherished for its long-lasting freshness and versatile nature. Representing appreciation, sincerity, and graceful love, it is perfect for bouquets, centerpieces, and decorative floral displays. Its serene presence enhances celebrations, special events, and everyday spaces with elegance and warmth. A flower that embodies refinement, emotion, and timeless beauty, Eustoma leaves a lasting and memorable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Eustoma / Lisianthus flowers fresh and elegant, provide them with plenty of water and change it every two days. Trim the stems at an angle to improve water absorption. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to maintain their delicate, rose-like blooms.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Eustoma, also known as Lisianthus, is admired for its delicate, rose-like blooms and graceful elegance. It symbolizes appreciation, charisma, and heartfelt emotions, making it perfect for bouquets, decorative arrangements, and thoughtful gifts. Its refined presence enhances weddings, celebrations, and everyday moments, remaining a flower that is elegant, meaningful, and unforgettable.",
   },
   {
     title: "Matthiola / Stock Flower (紫罗兰 Zǐluólán)",
@@ -799,24 +825,25 @@ export const blogData = [
     symbolic: [
       "Matthiola is cherished for its long-lasting freshness and pleasing fragrance. Representing loyalty, happiness, and enduring bonds, it is perfect for bouquets, centerpieces, and decorative floral displays. Its presence enhances events and everyday spaces with warmth and elegance. A flower that embodies romance, fragrance, and timeless beauty, stock flowers leave a soft yet unforgettable impression.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your Matthiola / Stock flowers fresh and fragrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Place them in a cool area, away from direct sunlight, heat sources, and ripening fruits, to preserve their vibrant colors and sweet scent.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture:
+      "Matthiola, also known as Stock Flower, is admired for its fragrant, clustered blooms and elegant appearance. It symbolizes lasting beauty, affection, and a sense of commitment, making it perfect for bouquets, decorative arrangements, and meaningful gifts. Its graceful presence enhances weddings, celebrations, and everyday moments, remaining a flower that is charming, meaningful, and unforgettable.",
   },
   {
     title: "FILLER FLOWERS 补花 (Bǔ huā)",
@@ -833,24 +860,24 @@ export const blogData = [
     symbolic: [
       "Filler flowers symbolize support, unity, and completeness, representing the details that make moments truly special. Loved for their adaptability and lasting freshness, they are essential in both classic and modern floral styling. With their understated charm, filler flowers create a polished, harmonious finish that enhances every floral creation.",
     ],
-     CareTips: [
+    careContent:
+      "To keep your filler flowers fresh and vibrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits to maintain their delicate, supportive blooms in arrangements.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture: "Filler flowers are admired for their delicate forms and subtle charm. They symbolize support, harmony, and completeness, making them perfect for bouquets, decorative arrangements, and accentuating primary blooms. Their understated presence enhances weddings, celebrations, and everyday moments, remaining an element that is graceful, meaningful, and unforgettable.",
   },
   {
     title: "Jasmine ( 茉莉花 Mòlì huā)",
@@ -867,23 +894,22 @@ export const blogData = [
     symbolic: [
       "Jasmine flowers symbolize purity, love, peace, and positive energy—representing emotions that linger long after the moment. Valued for their freshness and versatility, jasmine flowers bring a refined, harmonious finish that enhances every floral creation with gentle elegance.",
     ],
-     CareTips: [
+    careContent: "To keep your jasmine flowers fresh and fragrant, provide them with plenty of water and change it every two days. Trim the stems at an angle to help them absorb water efficiently. Keep them in a cool area, away from direct sunlight, heat sources, and ripening fruits to preserve their delicate blooms and sweet aroma.",
+
+    CareTips: [
       {
         Tip: "Trim stems at an angle every two days.",
-
       },
       {
         Tip: "Change water regularly to prevent bacterial growth.",
-
       },
       {
-        Tip: "Keep away from direct heat sources and sunlight.",
-
+        Tip: "Keep away from direct sunlight and heat sources.",
       },
       {
-        Tip: "Avoid placing near ripening fruits, which release ethylene gas."
+        Tip: "Avoid placing near ripening fruits, which release ethylene gas.",
       },
     ],
-    Culture:"Carnations are cherished for both their beauty and long-lasting freshness. They represent devotion, gratitude, and pure emotional connections, making them perfect for bouquets, arrangements, and decorative floral designs. Their elegant form enhances weddings, events, and everyday surprises, remaining a flower that is graceful, meaningful, and unforgettable."
+    Culture: "Jasmine is admired for its delicate, fragrant blossoms and elegant charm. It symbolizes purity, love, and spiritual devotion, making it perfect for bouquets, decorative arrangements, and ceremonial garlands. Its enchanting presence enhances weddings, celebrations, and everyday moments, remaining a flower that is graceful, meaningful, and unforgettable.",
   },
 ];

@@ -1,187 +1,80 @@
-/* ================= NAVBAR ================= */
 .navbar {
-  background: linear-gradient(180deg, #050505, #000);
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-}
-
-/* ================= DESKTOP LINKS ================= */
-.navLink {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* UNDERLINE ANIMATION */
-.navLink::after {
-  content: "";
-  position: absolute;
-  text-decoration: none;
-  left: 50%;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #883c8a, #ff8ad8);
-  transform: translateX(-50%);
-  transition: width 0.35s ease;
-}
-
-.navLink:hover {
-  color: #ff8ad8;
-  /* font-weight: bold; */
-}
-
-.navLink:hover::after {
+  position: absolute; /* IMPORTANT */
+  top: 20px;
+  left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
-/* ================= ICON WRAP ================= */
-.iconWrap {
+.navInner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 40px;
+
   display: flex;
   align-items: center;
-  gap: 18px;
+  justify-content: space-between;
+
+  background: rgba(116, 116, 116, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
 }
 
-/* ================= ICONS ================= */
+/* LEFT MENU */
+.leftMenu {
+  display: flex;
+  gap: 24px;
+}
+
+.leftMenu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.leftMenu a:hover {
+  opacity: 0.7;
+}
+
+/* CENTER LOGO */
+.logoCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logoCenter img {
+  height: 120px;
+}
+
+/* RIGHT ICONS */
+.rightIcons {
+  display: flex;
+  gap: 18px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* ICON WRAPPER */
 .NavIcons {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-  background: rgba(255, 255, 255, 0.06);
-  transition: all 0.3s ease;
 }
 
-/* SVG */
-.NavIcons .icon {
+/* SVG ICON */
+.NavIcons svg {
   width: 20px;
   height: 20px;
-  stroke: #fff;
-  transition: stroke 0.3s ease;
+  stroke: #ffffff; /* IMPORTANT */
+  fill: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* HOVER EFFECT */
-.NavIcons:hover {
-  background: linear-gradient(135deg, #883c8a, #ff8ad8);
-  transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 10px 25px rgba(255, 138, 216, 0.35);
-}
-
-.NavIcons:hover .icon {
-  stroke: #fff;
-}
-
-/* ================= TOGGLER ================= */
-:global(.navbar-toggler) {
-  border: none;
-}
-
-:global(.navbar-toggler-icon) {
-  filter: invert(1);
-}
-
-/* ================= OFFCANVAS ================= */
-:global(.offcanvas) {
-  background: radial-gradient(circle at top, #151515, #000);
-  color: #fff;
-  width: 280px;
-}
-
-/* HEADER */
-:global(.offcanvas-header) {
-  justify-content: center;
-  padding: 30px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-:global(.offcanvas-title) {
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-/* CLOSE BUTTON */
-:global(.offcanvas .btn-close) {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  filter: invert(1);
-}
-
-/* BODY */
-:global(.offcanvas-body) {
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-/* LINKS */
-:global(.offcanvas-body .nav-link) {
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* HOVER */
-:global(.offcanvas-body .nav-link:hover) {
-  color: #ff8ad8;
-}
-
-/* ================= ENTRY ANIMATION ================= */
-:global(.offcanvas.show) {
-  animation: slideFade 0.4s ease;
-}
-
-@keyframes slideFade {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-/* HOME TOGGLE ICON */
-.homeToggle {
-  width: 26px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  margin-right: 6px;
-  transition: transform 0.3s ease;
-}
-
-/* LINES */
-.homeToggle span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT */
-.homeToggle:hover {
+.NavIcons:hover svg {
+  opacity: 0.7;
   transform: scale(1.1);
-}
-
-.homeToggle:hover span {
-  background: linear-gradient(90deg, #883c8a, #ff8ad8);
-  box-shadow: 0 0 8px rgba(255, 138, 216, 0.6);
 }

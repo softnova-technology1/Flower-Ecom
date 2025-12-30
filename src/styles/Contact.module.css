@@ -3,14 +3,14 @@
   background: rgba(0, 0, 0, 0.55);
   position: relative;
   height: 100vh;
-  background: url("/images/about-main.jpg") bottom / cover no-repeat fixed;
+  background: url("/images/flowercon.jpg") bottom / cover no-repeat fixed;
 }
 
 .topHero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 

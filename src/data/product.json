@@ -197,24 +197,24 @@
   },
   {
     "id": 16,
-    "title": "Velvet Bloom",
+    "title": "Marigold (万寿菊 Wàn shòu jú)",
     "price": 92,
     "color": "purple",
     "type": "bouquet",
     "featured": false,
-    "image": "/images/velvet-bloom.jpg",
+    "image": "/images/jasmin.jpeg",
     "description": "White carnations symbolizing purity and good luck.",
     "composition": "20 white carnations with green fillers.",
     "delivery": "Next-day delivery in temperature-controlled packaging."
   },
   {
     "id": 17,
-    "title": "Fresh Meadow",
+    "title": "Jasmine ( 茉莉花 Mòlì huā)",
     "price": 57,
     "color": "green",
     "type": "bouquet",
     "featured": false,
-    "image": "/images/fresh-meadow",
+    "image": "/images/jasmine1.jpeg",
     "description": "White carnations symbolizing purity and good luck.",
     "composition": "20 white carnations with green fillers.",
     "delivery": "Next-day delivery in temperature-controlled packaging."

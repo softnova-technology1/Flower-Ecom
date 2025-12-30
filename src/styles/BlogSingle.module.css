@@ -365,7 +365,8 @@
 .CareTips p ,.Culture p{
   color: #a1a1a1;
   line-height: 1.7;
-  padding-top: 3rem;
+  padding-top: 0.5rem;
+  margin-bottom: 20px;
 }
 .Tips li {
   color: #a1a1a1;
