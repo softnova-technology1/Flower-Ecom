@@ -288,3 +288,38 @@
   line-height: 1.6;
   font-size: 15px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .contents {
+    padding-top: 15rem;
+    justify-content: normal;
+  }
+
+  .blogimg{
+    height: auto;
+  }
+}
+
+/* Responsive For below 768px */
+@media (max-width: 767px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .contents {
+    padding-top: 8rem;
+    height: 70vh;
+    justify-content: normal;
+  }
+.blogDetailsWrapper{
+  grid-template-columns: 1fr !important;
+}
+.title{
+  text-align: center;
+  margin-left: 0 !important;
+}
+}

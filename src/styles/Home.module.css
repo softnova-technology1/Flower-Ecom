@@ -9,13 +9,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 /* DARK OVERLAY */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust darkness */
+
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
@@ -783,3 +783,26 @@
     font-size: 17px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .contents {
+    padding-top: 15rem;
+    justify-content: normal;
+  }
+}
+
+/* Responsive For below 768px */
+@media (max-width: 767px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .contents {
+    padding-top: 10rem;
+    height: 55vh;
+    justify-content: normal;
+  }}

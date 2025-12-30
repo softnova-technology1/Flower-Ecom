@@ -48,8 +48,7 @@ export default function Home() {
                 <div className={styles.Offlink1}>
                   <Offcanvas
                     show={show}
-                    onHide={handleClose}
-                    
+                    onHide={handleClose}                 
                   >
                     <Offcanvas.Header>
                       <Offcanvas.Title>
@@ -96,7 +95,6 @@ export default function Home() {
           </Container>
         </div>
       </section>
-
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.wrapper}>

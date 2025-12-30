@@ -42,23 +42,22 @@ export default function AboutPage() {
       </section>
       <section className={styles.section}>
         {/* TOP CONTENT */}
-        <div className={styles.top}>
-          <h2>Our Story & Philosophy</h2>
-
-          <p>
-            At Dazzling Sky, we believe in the power of nature to transform
-            spaces and uplift spirits. Our philosophy centers on bringing the
-            freshest, most vibrant flowers from garden to home, ensuring every
-            bouquet tells a unique story of beauty and craftsmanship.
-          </p>
-
-          <p className={styles.lastText}>
-            We are dedicated to sustainable practices, ethical sourcing, and
-            creating timeless floral arrangements that not only adorn your space
-            but also reflect your personal style and create lasting memories.
-          </p>
-        </div>
-
+        <Container>
+          <div className={styles.top}>
+            <h2>Our Story & Philosophy</h2>
+            <p>
+              At Dazzling Sky, we believe in the power of nature to transform
+              spaces and uplift spirits. Our philosophy centers on bringing the
+              freshest, most vibrant flowers from garden to home, ensuring every
+              bouquet tells a unique story of beauty and craftsmanship.
+            </p>
+            <p className={styles.lastText}>
+              We are dedicated to sustainable practices, ethical sourcing, and
+              creating timeless floral arrangements that not only adorn your space
+              but also reflect your personal style and create lasting memories.
+            </p>
+          </div>
+        </Container>
         {/* TITLE */}
         <h3 className={styles.subTitle}>Explore Our Floral World</h3>
 
@@ -204,18 +203,18 @@ export default function AboutPage() {
         </div>
       </section>
       <section className={styles.sectionRs1}>
-        <div className={styles.containerRs1}>
-          <h2 className={styles.titleRs1}>Don't Hesitate to Contact Us</h2>
-
-          <p className={styles.textRs1}>
-            Don't hesitate to contact us—we're here to help. Send us your
-            message, and our team will get back to you shortly.
-          </p>
-
-          <Link href="/contact" className={styles.buttonRs1}>
-            Contact Us
-          </Link>
-        </div>
+        <Container>
+          <div className={styles.containerRs1}>
+            <h2 className={styles.titleRs1}>Don't Hesitate to Contact Us</h2>
+            <p className={styles.textRs1}>
+              Don't hesitate to contact us—we're here to help. Send us your
+              message, and our team will get back to you shortly.
+            </p>
+            <Link href="/contact" className={styles.buttonRs1}>
+              Contact Us
+            </Link>
+          </div>
+        </Container>
       </section>
       <Footer />
     </>

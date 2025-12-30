@@ -345,6 +345,7 @@ import Link from "next/link";
 import { addToCart } from "@/utils/cart";
 import Footer from "@/components/Footer";
 import FinalNav from "@/components/FinalNav";
+import { Container } from "react-bootstrap";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -365,7 +366,8 @@ export default function ProductDetails() {
     <>
       <FinalNav />
       <div className={styles.productPage}>
-        <p className={styles.breadcrumb}>
+        <Container>
+                  <p className={styles.breadcrumb}>
           <Link href="/">Home</Link> / <Link href="/catalog">Catalog</Link> /{" "}
           <span>{product.title}</span>
         </p>
@@ -416,6 +418,9 @@ export default function ProductDetails() {
             </div>
           </div>
         </div>
+        
+        </Container>
+
       </div>
 
       <Footer />

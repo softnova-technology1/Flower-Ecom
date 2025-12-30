@@ -52,3 +52,42 @@
   margin: 0 auto;
   font-family: "Syne", sans-serif;
 }
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .grid{
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+   .grid{
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+@media  (max-width: 767px) {
+ .grid{
+    grid-template-columns: repeat(1,4fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .contents {
+    padding-top: 15rem;
+    justify-content: normal;
+  }
+}
+
+/* Responsive For below 768px */
+@media (max-width: 767px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .contents {
+    padding-top: 10rem;
+    height: 55vh;
+    justify-content: normal;
+  }
+}

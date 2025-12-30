@@ -160,3 +160,41 @@
   line-height: 1.6;
   color: #ccc;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .contents {
+    padding-top: 15rem;
+    justify-content: normal;
+  }
+   .blogcontainer{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .blogimg{
+    height: auto;
+  }
+}
+
+/* Responsive For below 768px */
+@media (max-width: 767px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .contents {
+    padding-top: 8rem;
+    height: 70vh;
+    justify-content: normal;
+  }
+  .blogcontainer{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .blogimg{
+    height: auto;
+  }
+  .blogdesc{
+    font-size: 14px;
+  }
+}

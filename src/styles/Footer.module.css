@@ -91,6 +91,9 @@
   .container {
     grid-template-columns: 1fr 1fr;
   }
+  .brand{
+    margin: auto;
+  }
 }
 
 @media (max-width: 500px) {

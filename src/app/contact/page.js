@@ -235,6 +235,7 @@ export default function ContactPage() {
 
       {/* CONTACT SECTION */}
       <section className={styles.heroSection}>
+        <Container>
         <div className={styles.contactHero}>
           {/* LEFT CARD */}
           <div className={styles.card}>
@@ -307,6 +308,7 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+        </Container>
       </section>
 
       {/* MAP */}
