@@ -60,6 +60,20 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.btnWrap button {
+  margin-top: 2rem;
+  padding: 12px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(to right, #771658, #52206e);
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 .ctaSection {
   background-color: #000;
   display: flex;
@@ -128,34 +142,6 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-/* OUTER BORDER */
-.btnWrap {
-  display: inline-block;
-  padding: 6px;
-  border: 1px solid #c65ac8;
-  width: fit-content;
-
-}
-
-/* INNER BUTTON */
-.btn {
-  padding: 12px 25px;
-  background: linear-gradient(90deg, #883c8a, #ff8ad8);
-  border: 1px solid #ff8ad8;
-  color: #fbfafb;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-/* HOVER EFFECT */
-.btnWrap:hover .btn {
-  background: transparent;
-  color: #ffffff;
-  border: none;
-}
->>>>>>> 5ae8ca71876485e1cae352303be79b8eb205a422
 .section {
   background: radial-gradient(circle at top, #222 0%, #0d0d0d 60%);
   padding: 100px 80px;
@@ -444,13 +430,17 @@
 /* Responsive For below 768px */
 @media (max-width: 767px) {
   .hero {
-    height: 70vh;
+    height: auto;
   }
 
   .contents {
-    padding-top: 8rem;
-    height: 70vh;
+    padding-top: 10rem;
+    height: auto;
     justify-content: normal;
+  }
+
+  .btn {
+    margin-bottom: 3rem;
   }
 
   .featureCardRs {
@@ -472,5 +462,14 @@
 
   .subTitleRs {
     margin: 60px 0px 50px;
+  }
+
+  .contents h1,
+  .heading1,
+  .headers1 h1,
+  .headingf,
+  .headingmain,
+  .heading {
+    font-size: 28px !important;
   }
 }

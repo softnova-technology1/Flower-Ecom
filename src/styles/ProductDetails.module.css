@@ -512,7 +512,7 @@ color: white;
 .productPage {
   background: #000;
   color: #fff;
-  padding: 60px 80px;
+  padding: 12rem 80px 0 80px;
 }
 
 .breadcrumb {
@@ -655,8 +655,14 @@ color: white;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px ) {
   .productGrid {
     grid-template-columns: 1fr;
+  }
+  .productPage{
+    padding: 10rem 0 0 0  !important;
+  }
+  .qtyRow{
+    flex-direction: column;
   }
 }

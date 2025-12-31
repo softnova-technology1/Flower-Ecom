@@ -180,12 +180,13 @@
 /* Responsive For below 768px */
 @media (max-width: 767px) {
   .hero {
-    height: 70vh;
+    height: auto;
   }
 
   .contents {
-    padding-top: 8rem;
-    height: 70vh;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    height: auto;
     justify-content: normal;
   }
   .blogcontainer{
@@ -196,5 +197,8 @@
   }
   .blogdesc{
     font-size: 14px;
+  }
+  .contents h1,.heading1,.headers1 h1,.headingf,.headingmain,.heading{
+    font-size: 28px !important;
   }
 }

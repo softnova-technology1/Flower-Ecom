@@ -112,6 +112,13 @@
 
   .hero,
   .contents {
-    height: 55vh;
+    height: auto;
+  }
+  .contents{
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+  }
+  .contents h1{
+    font-size: 28px;
   }
 }

@@ -377,11 +377,12 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
-    height: 65vh;
+    height: auto;
   }
 
   .contents {
     padding-top: 15rem;
+    padding-bottom: 3rem;
     justify-content: normal;
   }
 
@@ -393,12 +394,15 @@
 /* Responsive For below 768px */
 @media (max-width: 767px) {
   .hero {
-    height: 70vh;
+    height: auto;
   }
-
+.contents h1,.heading1,.headers1 h1,.blogtitle,.recenttitle,.headingmain,.heading{
+    font-size: 28px !important;
+  }
   .contents {
-    padding-top: 8rem;
-    height: 70vh;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    height: auto;
     justify-content: normal;
   }
 .blogDetailsWrapper{

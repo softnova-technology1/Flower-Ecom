@@ -127,7 +127,7 @@ export default function ProductsPage() {
               maxWidth: "500px",
               border: "2px solid #ddd",
               borderRadius: "8px",
-              fontSize: "16px",
+              fontSize: "16px", marginBottom: "30px"
             }}
           />
           <button

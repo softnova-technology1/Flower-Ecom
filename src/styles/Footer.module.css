@@ -94,6 +94,9 @@
   .brand{
     margin: auto;
   }
+  .footer{
+    padding: 0 80px 20px;
+  }
 }
 
 @media (max-width: 500px) {

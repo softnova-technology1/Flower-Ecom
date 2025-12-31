@@ -227,20 +227,21 @@
 @media (max-width: 767px) {
   /* TOP HERO */
   .topHero {
-    height: 55vh;
+    height: auto;
     background-attachment: scroll;
   }
 
   .contents {
-    height: 55vh;
+    height: auto;
     text-align: center;
-    padding: 0 16px;
+    padding-top: 12rem;
+    padding-bottom: 3rem;
   }
 
   .contents h1 {
     font-size: 26px;
   }
-
+.card
   .contents p {
     font-size: 14px;
   }

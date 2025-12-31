@@ -43,7 +43,7 @@ export default function Home() {
             <div className={styles.logo}>
               <div>
                 <Button variant="primary" onClick={handleShow}>
-                  <img src="/images/logo-main.png" alt="" width={"100%"} />
+                  <img src="/images/logo-main.png" alt="" width={"100%"} className={styles.logos}/>
                 </Button>
                 <div className={styles.Offlink1}>
                   <Offcanvas
@@ -96,6 +96,7 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.section}>
+        <Container>         
         <div className={styles.container}>
           <div className={styles.wrapper}>
             {/* LEFT BIG CARD */}
@@ -105,7 +106,6 @@ export default function Home() {
                 alt="Whispering Blooms"
                 className={styles.mainImg}
               />
-
               <div className={styles.leftContent}>
                 <div className={styles.we}>
                   <h4 className={styles.cardTitle}>Whispering Blooms</h4>
@@ -128,7 +128,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             {/* RIGHT SECTION */}
             <div className={styles.rightSection}>
               <h2 className={styles.headingmain}>
@@ -155,15 +154,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Container>
       </section>
 
       <section className={styles.section1}>
+        <Container>
         <div className={styles.wrapper1}>
           {/* LEFT SIDE */}
           <div className={styles.left1}>
             <h2 className={styles.heading1}>
               A Fragrant Tale: Weaving
-              <br />
+             
               Memories with Flowers
             </h2>
 
@@ -205,9 +206,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Container>
       </section>
 
       <section className={styles.catalogSection}>
+        <Container>
         <div className={styles.container}>
           <div className={styles.catalogWrapper}>
             {/* LEFT COLUMN */}
@@ -266,9 +269,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Container>
       </section>
 
       <section className={styles.wrappercon}>
+        <Container>
         <div className={styles.containercon}>
           {/* LEFT SIDE */}
           <div className={styles.leftImgcon}>
@@ -307,9 +312,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </Container>
       </section>
 
       <section className={styles.contactSection}>
+        <Container>
         {/* HEADER */}
         <div className={styles.headers1}>
           <h1>
@@ -358,6 +365,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        </Container>
       </section>
       {/* <Category />
       <FlashSale />

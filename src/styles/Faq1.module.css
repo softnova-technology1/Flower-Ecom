@@ -307,12 +307,13 @@
 /* Responsive For below 768px */
 @media (max-width: 767px) {
   .hero {
-    height: 70vh;
+    height: auto;
   }
 
   .contents {
-    padding-top: 8rem;
-    height: 70vh;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    height: auto;
     justify-content: normal;
   }
 .blogDetailsWrapper{
@@ -320,6 +321,7 @@
 }
 .title{
   text-align: center;
+  font-size: 28px;
   margin-left: 0 !important;
 }
 }
