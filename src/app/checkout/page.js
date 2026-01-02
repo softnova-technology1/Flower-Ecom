@@ -363,6 +363,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import FinalNav from "@/components/FinalNav";
+import { Container } from "react-bootstrap";
 
 export default function Checkout() {
   const router = useRouter();
@@ -423,6 +424,8 @@ export default function Checkout() {
   return (
     <>
       <FinalNav/>
+      <div className="bg-black">
+        <Container>
       <div className={styles.wrapper}>
         {/* LEFT SIDE */}
         <div className={styles.left}>
@@ -631,7 +634,6 @@ export default function Checkout() {
             </div>
           )}
         </div>
-
         {/* RIGHT SUMMARY */}
         <div className={styles.rightBox}>
           <p className={styles.summaryTitle}>ORDER SUMMARY</p>
@@ -678,6 +680,7 @@ export default function Checkout() {
 
           <p className={styles.secure}>Secure Checkout 🔒</p>
         </div>
+      </div></Container>
       </div>
       <Footer />
     </>

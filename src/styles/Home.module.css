@@ -160,7 +160,7 @@
 .btnWrap:hover .btn {
   background: transparent;
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 
 /* RIGHT SECTION */
