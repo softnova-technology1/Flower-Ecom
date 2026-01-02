@@ -11,14 +11,13 @@
     opacity: 0;
     animation: overlayFade 0.3s ease forwards;
 }
-
 /* ===== Modal Card ===== */
 .modal {
     background: #ffffff;
     width: 100%;
     max-width: 600px;
     font-family: "KoPub Batang", serif !important;
-    height: 550px;
+    height: auto;
     padding: 4rem 4rem 3rem 4rem;
     position: relative;
     border-radius: 2px;
