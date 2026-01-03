@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import styles from "@/styles/OrderSucces.module.css";
 import FinalNav from "@/components/FinalNav";
 
-export default function OrderSuccessPage() {
+function OrderSuccessContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const orderId = searchParams.get("orderId");
@@ -50,5 +50,27 @@ export default function OrderSuccessPage() {
                 <Footer />
             
         </>
+    );
+}
+
+export default function OrderSuccessPage() {
+    return (
+        <Suspense fallback={
+            <>
+                <ScrollToTop />
+                <FinalNav />
+                <div style={{ 
+                    display: "flex", 
+                    justifyContent: "center", 
+                    alignItems: "center", 
+                    minHeight: "100vh" 
+                }}>
+                    Loading...
+                </div>
+                <Footer />
+            </>
+        }>
+            <OrderSuccessContent />
+        </Suspense>
     );
 }

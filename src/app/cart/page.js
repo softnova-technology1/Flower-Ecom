@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
-import Navbar from "@/components/Navbar";
+import FinalNav from "@/components/FinalNav";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import styles from "@/styles/Cart.module.css";
@@ -20,7 +20,7 @@ export default function CartPage() {
     if (cart.length === 0) {
         return (
             <>
-                <Navbar />
+                <FinalNav />
                 <div style={{ textAlign: "center", padding: "100px 20px" }}>
                     <h2>Your cart is empty</h2>
                     <button
@@ -47,7 +47,7 @@ export default function CartPage() {
     return (
         <>
             <ScrollToTop />
-            <Navbar />
+            <FinalNav />
                 <div className={styles.cartPage1}>
                     <div className={styles.cartPage}>
                         <table className={styles.cartTable}>

@@ -125,7 +125,7 @@ export default function ProfilePage() {
     if (status === "loading") {
         return (
             <>
-                <Navbar />
+                <FinalNav />
                 <div style={{ textAlign: "center", padding: "100px 20px" }}>
                     <h2>Loading...</h2>
                 </div>

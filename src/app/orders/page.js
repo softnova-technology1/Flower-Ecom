@@ -60,7 +60,7 @@ export default function OrdersPage() {
     if (status === "loading" || loading) {
         return (
             <>
-                <Navbar />
+                <FinalNav />
                 <div style={{ textAlign: "center", padding: "100px 20px" }}>
                     <h2>Loading orders...</h2>
                 </div>

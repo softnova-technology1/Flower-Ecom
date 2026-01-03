@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 import FinalNav from "@/components/FinalNav";
@@ -9,7 +9,7 @@ import { Container } from "react-bootstrap";
 import styles from "@/styles/Payment.module.css";
 import Image from "next/image";
 
-export default function PaymentPage() {
+function PaymentContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const orderId = searchParams.get("orderId");
@@ -332,3 +332,20 @@ export default function PaymentPage() {
     );
 }
 
+export default function PaymentPage() {
+    return (
+        <Suspense fallback={
+            <>
+                <FinalNav />
+                <Container>
+                    <div style={{ textAlign: "center", padding: "100px 20px" }}>
+                        <h2>Loading payment details...</h2>
+                    </div>
+                </Container>
+                <Footer />
+            </>
+        }>
+            <PaymentContent />
+        </Suspense>
+    );
+}
