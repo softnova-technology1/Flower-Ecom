@@ -12,6 +12,8 @@ export default function TermsPage() {
   return (
     <>
       <FinalNav />
+      <div className="pt-5">
+        
       <section className={styles.wrapper}>
         <div className={styles.container}>
           <section className={styles.wrapper}>
@@ -198,6 +200,8 @@ export default function TermsPage() {
           </section>
         </div>
       </section>
+      
+      </div>
       <Footer />
     </>
   );

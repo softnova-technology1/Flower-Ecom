@@ -294,7 +294,7 @@
 .btnWrap:hover .button1 {
   background: transparent;
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 
 /* RESPONSIVE */
@@ -395,7 +395,7 @@
 .openMoreBtn:hover {
   background: transparent;
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .catalogSection {
@@ -470,7 +470,7 @@
 .btncon:hover {
   background: transparent;
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 
 /* RIGHT COLUMN */
