@@ -1,6 +1,4 @@
-import { CartProvider } from "@/context/CartContext";
-import AuthProvider from "@/components/AuthProvider";
-import { ToastContainer } from "react-toastify";
+import Providers from "@/components/Providers";
 import { BsWhatsapp } from "react-icons/bs";
 import Script from "next/script";
 
@@ -27,12 +25,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <AuthProvider>
-          <CartProvider>
-            <ToastContainer position="top-center" autoClose={4000} />
-            {children}
-          </CartProvider>
-        </AuthProvider>
+        <Providers>
+          {children}
+        </Providers>
 
         {/* AOS JS */}
         <Script
