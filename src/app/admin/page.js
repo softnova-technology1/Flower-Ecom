@@ -1,6 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { 
+    MdShoppingCart, 
+    MdAttachMoney, 
+    MdInventory, 
+    MdPeople,
+    MdTrendingUp,
+    MdAccessTime
+} from "react-icons/md";
 import styles from "@/styles/AdminDashboard.module.css";
 
 export default function AdminDashboard() {
@@ -27,52 +35,89 @@ export default function AdminDashboard() {
     };
 
     if (loading) {
-        return <div className={styles.loading}>Loading analytics...</div>;
+        return (
+            <div className={styles.loading}>
+                <div className={styles.spinner}></div>
+                <p>Loading analytics...</p>
+            </div>
+        );
     }
 
     if (!analytics) {
         return <div className={styles.error}>Failed to load analytics</div>;
     }
 
+    const metrics = [
+        {
+            icon: MdShoppingCart,
+            label: "Total Orders",
+            value: analytics.totalOrders,
+            color: "#3b82f6",
+            bgColor: "rgba(59, 130, 246, 0.1)"
+        },
+        {
+            icon: MdAttachMoney,
+            label: "Total Revenue",
+            value: `$${analytics.totalRevenue.toFixed(2)}`,
+            color: "#10b981",
+            bgColor: "rgba(16, 185, 129, 0.1)"
+        },
+        {
+            icon: MdInventory,
+            label: "Total Products",
+            value: analytics.totalProducts,
+            color: "#f59e0b",
+            bgColor: "rgba(245, 158, 11, 0.1)"
+        },
+        {
+            icon: MdPeople,
+            label: "Total Users",
+            value: analytics.totalUsers,
+            color: "#8b5cf6",
+            bgColor: "rgba(139, 92, 246, 0.1)"
+        }
+    ];
+
     return (
         <div className={styles.dashboard}>
-            <h1 className={styles.title}>Dashboard</h1>
+            <div className={styles.titleBar}>
+                <div>
+                    <h1 className={styles.title}>Dashboard</h1>
+                    <p className={styles.welcomeText}>Welcome back! Here's what's happening today.</p>
+                </div>
+                <div className={styles.dateTime}>
+                    <MdAccessTime />
+                    <span>{new Date().toLocaleDateString('en-US', { 
+                        weekday: 'long', 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    })}</span>
+                </div>
+            </div>
 
             {/* Metrics Cards */}
             <div className={styles.metricsGrid}>
-                <div className={styles.metricCard}>
-                    <div className={styles.metricIcon}>📦</div>
-                    <div className={styles.metricInfo}>
-                        <h3>Total Orders</h3>
-                        <p className={styles.metricValue}>{analytics.totalOrders}</p>
-                    </div>
-                </div>
-
-                <div className={styles.metricCard}>
-                    <div className={styles.metricIcon}>💰</div>
-                    <div className={styles.metricInfo}>
-                        <h3>Total Revenue</h3>
-                        <p className={styles.metricValue}>
-                            ${analytics.totalRevenue.toFixed(2)}
-                        </p>
-                    </div>
-                </div>
-
-                <div className={styles.metricCard}>
-                    <div className={styles.metricIcon}>🛍️</div>
-                    <div className={styles.metricInfo}>
-                        <h3>Total Products</h3>
-                        <p className={styles.metricValue}>{analytics.totalProducts}</p>
-                    </div>
-                </div>
-
-                <div className={styles.metricCard}>
-                    <div className={styles.metricIcon}>👥</div>
-                    <div className={styles.metricInfo}>
-                        <h3>Total Users</h3>
-                        <p className={styles.metricValue}>{analytics.totalUsers}</p>
-                    </div>
-                </div>
+                {metrics.map((metric, index) => {
+                    const Icon = metric.icon;
+                    return (
+                        <div key={index} className={styles.metricCard} style={{ borderTop: `3px solid ${metric.color}` }}>
+                            <div className={styles.metricIcon} style={{ 
+                                background: metric.bgColor,
+                                color: metric.color
+                            }}>
+                                <Icon />
+                            </div>
+                            <div className={styles.metricInfo}>
+                                <h3>{metric.label}</h3>
+                                <p className={styles.metricValue}>{metric.value}</p>
+                            </div>
+                            <div className={styles.metricTrend}>
+                                <MdTrendingUp style={{ color: metric.color }} />
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
 
             {/* Recent Orders */}

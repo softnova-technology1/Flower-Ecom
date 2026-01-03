@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
-import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Orders.module.css";
 import FinalNav from "@/components/FinalNav";
 
@@ -77,7 +76,6 @@ export default function OrdersPage() {
     return (
         <>
             <FinalNav />
-            <PageWrapper>
                 <div className={styles.container}>
                     <h1 className={styles.title}>My Orders</h1>
 
@@ -142,8 +140,7 @@ export default function OrdersPage() {
                         </div>
                     )}
                 </div>
-                <Footer />
-            </PageWrapper>
+            <Footer />
         </>
     );
 }

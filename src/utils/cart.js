@@ -37,3 +37,9 @@ export const removeFromCart = (id) => {
   const cart = getCart().filter(item => item.id !== id);
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 };
+
+export const clearCart = () => {
+  if (typeof window !== "undefined") {
+    localStorage.removeItem(CART_KEY);
+  }
+};

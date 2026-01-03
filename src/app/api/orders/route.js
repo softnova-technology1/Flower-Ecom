@@ -64,22 +64,44 @@ export async function POST(request) {
 
         const order = await Order.create(orderData);
 
-        // Send order confirmation email (don't wait for it)
+        // Reduce stock for ordered items
         try {
+            const Product = (await import('@/models/Product')).default;
+            for (const item of body.items) {
+                if (item.product) {
+                    await Product.findByIdAndUpdate(
+                        item.product,
+                        { $inc: { stock: -item.quantity } },
+                        { runValidators: false }
+                    );
+                }
+            }
+        } catch (stockError) {
+            console.error('Error updating stock:', stockError);
+            // Don't fail the order if stock update fails
+        }
+
+        // Send notifications (don't wait for them - fire and forget)
+        try {
+            // Notify owner about new order
+            const { notifyOwnerNewOrder } = await import('@/lib/notifications');
+            notifyOwnerNewOrder(order).catch(err => console.error('Notification error:', err));
+
+            // Send order confirmation email to customer
             const { sendEmail } = await import('@/lib/email');
             const { orderConfirmationTemplate } = await import('@/lib/emailTemplates');
 
-            const customerEmail = order.user?.email || order.guestEmail;
+            const customerEmail = order.guestEmail || order.user?.email;
             if (customerEmail) {
-                await sendEmail({
+                sendEmail({
                     to: customerEmail,
-                    subject: `Order Confirmation #${order._id.toString().slice(-8).toUpperCase()}`,
+                    subject: `Order Received #${order._id.toString().slice(-8).toUpperCase()}`,
                     html: orderConfirmationTemplate(order),
-                });
+                }).catch(err => console.error('Email error:', err));
             }
-        } catch (emailError) {
-            console.error('Error sending order confirmation email:', emailError);
-            // Don't fail the order if email fails
+        } catch (error) {
+            console.error('Error sending notifications:', error);
+            // Don't fail the order if notifications fail
         }
 
         return NextResponse.json(

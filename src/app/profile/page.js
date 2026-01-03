@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import Footer from "@/components/Footer";
-import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Profile.module.css";
 import FinalNav from "@/components/FinalNav";
 
@@ -142,7 +141,6 @@ export default function ProfilePage() {
     return (
         <>
             <FinalNav/>
-            <PageWrapper>
                 <div className={styles.container}>
                     <h1 className={styles.title}>My Profile</h1>
 
@@ -268,8 +266,7 @@ export default function ProfilePage() {
                         </form>
                     </div>
                 </div>
-                <Footer />
-            </PageWrapper>
+            <Footer />
         </>
     );
 }

@@ -4,6 +4,15 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import { 
+    MdInventory, 
+    MdAdd, 
+    MdEdit, 
+    MdDelete,
+    MdImage,
+    MdCheckCircle,
+    MdCancel
+} from "react-icons/md";
 import styles from "@/styles/AdminProducts.module.css";
 
 export default function AdminProductsPage() {
@@ -55,14 +64,39 @@ export default function AdminProductsPage() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h1 className={styles.title}>Products Management</h1>
-                <Link href="/admin/products/new" className={styles.addBtn}>
-                    + Add Product
+                <div className={styles.titleGroup}>
+                    <MdInventory className={styles.titleIcon} />
+                    <h1 className={styles.title}>Products Management</h1>
+                </div>
+                <Link href="/admin/products/add" className={styles.addBtn}>
+                    <MdAdd /> Add Product
                 </Link>
             </div>
 
+            <div className={styles.statsBar}>
+                <div className={styles.statCard}>
+                    <span className={styles.statValue}>{products.length}</span>
+                    <span className={styles.statLabel}>Total Products</span>
+                </div>
+                <div className={styles.statCard}>
+                    <span className={styles.statValue}>
+                        {products.filter(p => p.stock > 0).length}
+                    </span>
+                    <span className={styles.statLabel}>In Stock</span>
+                </div>
+                <div className={styles.statCard}>
+                    <span className={styles.statValue}>
+                        {products.filter(p => p.featured).length}
+                    </span>
+                    <span className={styles.statLabel}>Featured</span>
+                </div>
+            </div>
+
             {loading ? (
-                <div className={styles.loading}>Loading products...</div>
+                <div className={styles.loading}>
+                    <div className={styles.spinner}></div>
+                    <p>Loading products...</p>
+                </div>
             ) : (
                 <div className={styles.tableContainer}>
                     <table className={styles.table}>
@@ -81,21 +115,41 @@ export default function AdminProductsPage() {
                             {products.map((product) => (
                                 <tr key={product._id}>
                                     <td>
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className={styles.productImage}
-                                        />
+                                        {product.image ? (
+                                            <img
+                                                src={product.image}
+                                                alt={product.name}
+                                                className={styles.productImage}
+                                            />
+                                        ) : (
+                                            <div className={styles.noImage}>
+                                                <MdImage />
+                                            </div>
+                                        )}
                                     </td>
-                                    <td>{product.name}</td>
-                                    <td>{product.category}</td>
-                                    <td>${product.price}</td>
-                                    <td>{product.stock}</td>
+                                    <td className={styles.nameCell}>{product.name}</td>
+                                    <td>
+                                        <span className={styles.categoryBadge}>{product.category}</span>
+                                    </td>
+                                    <td className={styles.priceCell}>${product.price}</td>
+                                    <td>
+                                        <span className={`${styles.stockBadge} ${
+                                            product.stock === 0 ? styles.outOfStock : 
+                                            product.stock <= 5 ? styles.lowStock : 
+                                            styles.inStock
+                                        }`}>
+                                            {product.stock}
+                                        </span>
+                                    </td>
                                     <td>
                                         {product.featured ? (
-                                            <span className={styles.badgeYes}>Yes</span>
+                                            <span className={styles.badgeYes}>
+                                                <MdCheckCircle /> Yes
+                                            </span>
                                         ) : (
-                                            <span className={styles.badgeNo}>No</span>
+                                            <span className={styles.badgeNo}>
+                                                <MdCancel /> No
+                                            </span>
                                         )}
                                     </td>
                                     <td>
@@ -106,7 +160,7 @@ export default function AdminProductsPage() {
                                                 }
                                                 className={styles.editBtn}
                                             >
-                                                Edit
+                                                <MdEdit /> Edit
                                             </button>
                                             <button
                                                 onClick={() =>
@@ -114,7 +168,7 @@ export default function AdminProductsPage() {
                                                 }
                                                 className={styles.deleteBtn}
                                             >
-                                                Delete
+                                                <MdDelete /> Delete
                                             </button>
                                         </div>
                                     </td>

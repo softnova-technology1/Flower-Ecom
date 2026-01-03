@@ -1,0 +1,386 @@
+.paymentPage {
+    background: #000;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leftBox {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.leftBox h1 {
+    color: #c78a3a;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.orderInfo {
+    color: #aaa;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.amount {
+    color: #fff;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.amount strong {
+    color: #c78a3a;
+}
+
+.paymentMethod {
+    margin: 40px 0;
+}
+
+.paymentMethod h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.upiButton {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.upiButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.divider {
+    text-align: center;
+    color: #666;
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #333;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.manualPayment {
+    background: #0f0f0f;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.manualPayment h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.upiDetails p {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.copyBox {
+    display: flex;
+    gap: 10px;
+}
+
+.copyBox input {
+    flex: 1;
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-family: monospace;
+}
+
+.copyBox button {
+    padding: 12px 24px;
+    background: #c78a3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.copyBox button:hover {
+    background: #d69a4a;
+}
+
+.qrPlaceholder {
+    margin-top: 30px;
+    padding: 60px;
+    background: #1a1a1a;
+    border: 2px dashed #333;
+    border-radius: 8px;
+    text-align: center;
+    color: #aaa;
+}
+
+.proofSection {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #333;
+}
+
+.proofSection h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.proofSection > p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.inputGroup {
+    margin-bottom: 25px;
+}
+
+.inputGroup label {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #c78a3a;
+}
+
+.fileInput {
+    width: 100%;
+    padding: 14px;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fileName {
+    color: #4ade80;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 18px;
+    background: #c78a3a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #d69a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(199, 138, 58, 0.3);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.noteText {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Right Box - Order Summary */
+.rightBox {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.rightBox h2 {
+    color: #c78a3a;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.orderItems {
+    margin-bottom: 30px;
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.itemDetails {
+    flex: 1;
+}
+
+.itemName {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.itemQty {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.itemPrice {
+    color: #c78a3a;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+
+.totalRow span:last-child {
+    color: #c78a3a;
+}
+
+.deliveryInfo {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.deliveryInfo h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.deliveryInfo p {
+    color: #aaa;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.backBtn {
+    padding: 12px 30px;
+    background: #c78a3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rightBox {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .leftBox,
+    .rightBox {
+        padding: 25px;
+    }
+
+    .leftBox h1 {
+        font-size: 24px;
+    }
+
+    .amount {
+        font-size: 20px;
+    }
+}
+

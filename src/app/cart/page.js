@@ -6,7 +6,6 @@ import { useCart } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Cart.module.css";
 
 export default function CartPage() {
@@ -49,7 +48,6 @@ export default function CartPage() {
         <>
             <ScrollToTop />
             <Navbar />
-            <PageWrapper>
                 <div className={styles.cartPage1}>
                     <div className={styles.cartPage}>
                         <table className={styles.cartTable}>
@@ -134,8 +132,7 @@ export default function CartPage() {
                         </div>
                     </div>
                 </div>
-                <Footer />
-            </PageWrapper>
+            <Footer />
         </>
     );
 }

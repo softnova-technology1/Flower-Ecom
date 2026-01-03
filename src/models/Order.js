@@ -15,7 +15,10 @@ const OrderSchema = new mongoose.Schema(
                 product: {
                     type: mongoose.Schema.Types.ObjectId,
                     ref: 'Product',
-                    required: false, // Optional for guest checkout
+                    required: false, // Optional - not required for static JSON products
+                },
+                productId: {
+                    type: String, // For static JSON product IDs
                 },
                 name: {
                     type: String,
@@ -74,14 +77,33 @@ const OrderSchema = new mongoose.Schema(
         paymentMethod: {
             type: String,
             required: true,
-            enum: ['card', 'paypal', 'cash'],
-            default: 'cash',
+            enum: ['card', 'paypal', 'cash', 'upi'],
+            default: 'upi',
         },
         paymentResult: {
             id: String,
             status: String,
             updateTime: String,
             emailAddress: String,
+            upiId: String,
+            transactionId: String,
+            paymentScreenshot: String, // URL to uploaded screenshot
+        },
+        trackingNumber: {
+            type: String,
+            unique: true,
+            sparse: true, // Allows null values
+        },
+        ownerNotes: {
+            type: String, // For internal notes after calling customer
+        },
+        customerConfirmed: {
+            type: Boolean,
+            default: false, // True after owner calls and confirms
+        },
+        deliveryPartner: {
+            name: String,
+            phone: String,
         },
         itemsPrice: {
             type: Number,
@@ -114,8 +136,8 @@ const OrderSchema = new mongoose.Schema(
         status: {
             type: String,
             required: true,
-            enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled'],
-            default: 'pending',
+            enum: ['pending_payment', 'payment_received', 'confirmed', 'preparing', 'out_for_delivery', 'delivered', 'cancelled'],
+            default: 'pending_payment',
         },
         isDelivered: {
             type: Boolean,
@@ -124,6 +146,15 @@ const OrderSchema = new mongoose.Schema(
         },
         deliveredAt: {
             type: Date,
+        },
+        deliveryDate: {
+            type: String, // Store as YYYY-MM-DD
+        },
+        deliveryTime: {
+            type: String, // Store as HH:MM
+        },
+        customerPhone: {
+            type: String, // Direct customer phone for owner to call
         },
     },
     {

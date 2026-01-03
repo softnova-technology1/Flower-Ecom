@@ -1,5 +1,11 @@
 .container {
     max-width: 1400px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .header {
@@ -7,42 +13,114 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.titleGroup {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titleIcon {
+    font-size: 40px;
+    color: #c78a3a;
 }
 
 .title {
     font-size: 32px;
     font-weight: 700;
-    color: #333;
+    color: #1a1a2e;
     margin: 0;
 }
 
 .addBtn {
-    padding: 12px 24px;
-    background: linear-gradient(to right,#771658, #52206E);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #c78a3a 0%, #d69a4a 100%);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(199, 138, 58, 0.3);
 }
 
 .addBtn:hover {
-     border: 1px solid #771658;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(199, 138, 58, 0.4);
+}
+
+.statsBar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid #c78a3a;
+}
+
+.statValue {
+    font-size: 32px;
+    font-weight: 700;
+    color: #c78a3a;
+}
+
+.statLabel {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
 }
 
 .loading {
-    text-align: center;
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
     background: white;
-    border-radius: 12px;
-    font-size: 18px;
+    border-radius: 16px;
+    gap: 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #c78a3a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading p {
+    font-size: 16px;
     color: #666;
 }
 
 .tableContainer {
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     overflow-x: auto;
 }
 
@@ -53,78 +131,163 @@
 
 .table th {
     text-align: left;
-    padding: 15px;
-    background: #f5f5f5;
-    font-weight: 600;
-    color: #333;
-    font-size: 14px;
-    border-bottom: 2px solid #e0e0e0;
+    padding: 18px 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #c78a3a;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+    transform: scale(1.01);
 }
 
 .table td {
-    padding: 15px;
+    padding: 18px 15px;
     border-bottom: 1px solid #f0f0f0;
     font-size: 14px;
     color: #555;
 }
 
 .productImage {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.productImage:hover {
+    transform: scale(1.15);
+}
+
+.noImage {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 12px;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.nameCell {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.categoryBadge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.priceCell {
+    font-weight: 700;
+    color: #10b981;
+    font-size: 16px;
+}
+
+.stockBadge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.inStock {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+}
+
+.lowStock {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+    color: #92400e;
+}
+
+.outOfStock {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
 }
 
 .badgeYes,
 .badgeNo {
-    padding: 4px 12px;
-    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
 }
 
 .badgeYes {
-    background: #d1e7dd;
-    color: #0f5132;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
 }
 
 .badgeNo {
-    background: #f8d7da;
-    color: #842029;
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
 }
 
 .actions {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .editBtn,
 .deleteBtn {
-    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 .editBtn {
-    background: #0d6efd;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
 }
 
 .editBtn:hover {
-    background: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
 
 .deleteBtn {
-    background: #dc3545;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
     color: white;
+    box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3);
 }
 
 .deleteBtn:hover {
-    background: #bb2d3b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
 }
 
 @media (max-width: 768px) {

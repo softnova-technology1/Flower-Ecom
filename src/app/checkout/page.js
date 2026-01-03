@@ -356,7 +356,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "@/styles/Checkout.module.css";
-import { getCart } from "@/utils/cart";
+import { getCart, clearCart } from "@/utils/cart";
 import { FiEdit2 } from "react-icons/fi";
 import { FaCheck } from "react-icons/fa";
 import { useRouter } from "next/navigation";
@@ -364,6 +364,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import FinalNav from "@/components/FinalNav";
 import { Container } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 export default function Checkout() {
   const router = useRouter();
@@ -387,6 +388,7 @@ export default function Checkout() {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setCartItems(getCart());
@@ -419,6 +421,89 @@ export default function Checkout() {
 
     setErrors(err);
     if (Object.keys(err).length === 0) setStep(3);
+  };
+
+  /* CREATE ORDER AND REDIRECT TO UPI PAYMENT */
+  const handlePlaceOrder = async () => {
+    if (cartItems.length === 0) {
+      toast.error("Your cart is empty!");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // Prepare order data
+      const orderData = {
+        guestEmail: contact.email,
+        items: cartItems.map((item) => ({
+          // Don't include product reference since we're using static JSON products
+          // product: item.id, // This causes error with static JSON
+          name: item.title,
+          quantity: item.qty,
+          price: item.price,
+          image: item.image,
+        })),
+        shippingAddress: {
+          name: shipping.name,
+          street: shipping.street + (shipping.apt ? ", " + shipping.apt : ""),
+          city: "Singapore", // Default for Singapore
+          state: "SG",
+          zipCode: "000000", // Can be updated later
+          country: "Singapore",
+          phone: shipping.phone,
+        },
+        billingAddress: {
+          name: contact.name,
+          street: shipping.street,
+          city: "Singapore",
+          state: "SG",
+          zipCode: "000000",
+          country: "Singapore",
+        },
+        paymentMethod: "upi",
+        itemsPrice: subtotal,
+        taxPrice: 0,
+        shippingPrice: 0,
+        totalPrice: subtotal,
+        deliveryDate: shipping.date,
+        deliveryTime: shipping.time,
+        customerPhone: contact.phone,
+      };
+
+      // Create order via API
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Clear cart
+        clearCart();
+
+        // Show success and redirect to payment page
+        toast.success("Order created! Redirecting to payment...", {
+          position: "top-center",
+          autoClose: 2000,
+        });
+
+        setTimeout(() => {
+          router.push(`/payment?orderId=${data.order._id}`);
+        }, 2000);
+      } else {
+        throw new Error(data.error || "Failed to create order");
+      }
+    } catch (error) {
+      console.error("Order error:", error);
+      toast.error(error.message || "Failed to place order. Please try again.", {
+        position: "top-center",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -615,22 +700,21 @@ export default function Checkout() {
 
           {step === 3 && (
             <div className={styles.paymentSection}>
-              <button className={styles.payButton1}>
-                <Image
-                  src="/images/Google.png"
-                  alt="Google Pay"
-                  width={22}
-                  height={22}
-                />
-                <span>PAY NOW</span>
-              </button>
+              <p className={styles.paymentInfo}>
+                Click below to proceed with UPI payment via GPay/PhonePe
+              </p>
 
               <button
                 className={styles.purchaseButton}
-                onClick={() => router.push("/order-success")}
+                onClick={handlePlaceOrder}
+                disabled={loading}
               >
-                MAKE A PURCHASE
+                {loading ? "Creating Order..." : "PROCEED TO PAYMENT"}
               </button>
+
+              <p className={styles.secureText}>
+                🔒 After clicking, you'll be redirected to complete UPI payment
+              </p>
             </div>
           )}
         </div>

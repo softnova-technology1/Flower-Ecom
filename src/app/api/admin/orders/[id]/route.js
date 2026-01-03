@@ -16,12 +16,28 @@ export async function PUT(request, { params }) {
 
         await connectDB();
         const { id } = await params;
-        const { status } = await request.json();
+        const body = await request.json();
+        const { status, trackingNumber } = body;
+
+        const updateFields = {};
+        if (status) {
+            updateFields.status = status;
+            if (status === 'delivered') {
+                updateFields.isDelivered = true;
+                updateFields.deliveredAt = new Date();
+            } else {
+                updateFields.isDelivered = false;
+                updateFields.deliveredAt = null;
+            }
+        }
+        if (trackingNumber !== undefined) {
+            updateFields.trackingNumber = trackingNumber;
+        }
 
         const order = await Order.findByIdAndUpdate(
             id,
-            { status },
-            { new: true }
+            updateFields,
+            { new: true, runValidators: true }
         );
 
         if (!order) {

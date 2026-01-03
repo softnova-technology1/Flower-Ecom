@@ -6,7 +6,6 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 import Footer from "@/components/Footer";
-import PageWrapper from "@/components/PageWrapper";
 import styles from "@/styles/Auth.module.css";
 import FinalNav from "@/components/FinalNav";
 
@@ -65,58 +64,56 @@ export default function LoginPage() {
     return (
         <>
             <FinalNav />
-            <PageWrapper>
-                <div className={styles.container}>
-                    <div className={styles.formBox}>
-                        <h1 className={styles.title}>Welcome Back</h1>
-                        <p className={styles.subtitle}>Login to your account</p>
+            <div className={styles.container}>
+                <div className={styles.formBox}>
+                    <h1 className={styles.title}>Welcome Back</h1>
+                    <p className={styles.subtitle}>Login to your account</p>
 
-                        <form onSubmit={handleSubmit} className={styles.form}>
-                            <div className={styles.inputGroup}>
-                                <label className={styles.label}>Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className={styles.input}
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                            </div>
+                    <form onSubmit={handleSubmit} className={styles.form}>
+                        <div className={styles.inputGroup}>
+                            <label className={styles.label}>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className={styles.input}
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
 
-                            <div className={styles.inputGroup}>
-                                <label className={styles.label}>Password</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    value={formData.password}
-                                    onChange={handleChange}
-                                    className={styles.input}
-                                    placeholder="Enter your password"
-                                    required
-                                />
-                            </div>
+                        <div className={styles.inputGroup}>
+                            <label className={styles.label}>Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                className={styles.input}
+                                placeholder="Enter your password"
+                                required
+                            />
+                        </div>
 
-                            <button
-                                type="submit"
-                                className={styles.submitBtn}
-                                disabled={loading}
-                            >
-                                {loading ? "Logging in..." : "Login"}
-                            </button>
-                        </form>
+                        <button
+                            type="submit"
+                            className={styles.submitBtn}
+                            disabled={loading}
+                        >
+                            {loading ? "Logging in..." : "Login"}
+                        </button>
+                    </form>
 
-                        <p className={styles.linkText}>
-                            Don't have an account?{" "}
-                            <Link href="/register" className={styles.link}>
-                                Register here
-                            </Link>
-                        </p>
-                    </div>
+                    <p className={styles.linkText}>
+                        Don't have an account?{" "}
+                        <Link href="/register" className={styles.link}>
+                            Register here
+                        </Link>
+                    </p>
                 </div>
-                <Footer />
-            </PageWrapper>
+            </div>
+            <Footer />
         </>
     );
 }

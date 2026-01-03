@@ -338,11 +338,11 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import PRODUCTS from "@/data/product.json";
 import styles from "@/styles/ProductDetails.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { addToCart } from "@/utils/cart";
+import { useCart } from "@/context/CartContext";
+import { toast } from "react-toastify";
 import Footer from "@/components/Footer";
 import FinalNav from "@/components/FinalNav";
 import { Container } from "react-bootstrap";
@@ -350,16 +350,92 @@ import { Container } from "react-bootstrap";
 export default function ProductDetails() {
   const { id } = useParams();
   const router = useRouter();
-  const product = PRODUCTS.find((p) => p.id.toString() === id);
+  const { addToCart } = useCart();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [qty, setQty] = useState(1);
 
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(`/api/products/${id}`);
+        const data = await response.json();
+        
+        if (data.success) {
+          setProduct(data.product);
+        } else {
+          toast.error("Product not found");
+        }
+      } catch (error) {
+        console.error("Error fetching product:", error);
+        toast.error("Failed to load product");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchProduct();
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <>
+        <FinalNav />
+        <div style={{ textAlign: "center", padding: "100px 20px" }}>
+          <h2>Loading product...</h2>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
   if (!product) {
-    return <p style={{ padding: "40px" }}>Product not found</p>;
+    return (
+      <>
+        <FinalNav />
+        <div style={{ textAlign: "center", padding: "100px 20px" }}>
+          <h2>Product not found</h2>
+          <button onClick={() => router.push("/products")} style={{ 
+            marginTop: "20px", 
+            padding: "10px 20px", 
+            background: "#c78a3a", 
+            color: "white", 
+            border: "none", 
+            borderRadius: "6px", 
+            cursor: "pointer" 
+          }}>
+            Browse Products
+          </button>
+        </div>
+        <Footer />
+      </>
+    );
   }
 
   const handleAddToBag = () => {
-    addToCart(product, qty);
-    router.push("/basket");
+    if (product.stock === 0) {
+      toast.error("Product is out of stock");
+      return;
+    }
+    
+    if (qty > product.stock) {
+      toast.error(`Only ${product.stock} items available`);
+      return;
+    }
+
+    addToCart({
+      id: product._id,
+      title: product.name,
+      price: product.price,
+      image: product.image,
+      qty: qty,
+      stock: product.stock
+    });
+    
+    toast.success("Added to cart!");
+    setTimeout(() => router.push("/basket"), 1000);
   };
 
   return (
@@ -367,33 +443,58 @@ export default function ProductDetails() {
       <FinalNav />
       <div className={styles.productPage}>
         <Container>
-                  <p className={styles.breadcrumb}>
-          <Link href="/">Home</Link> / <Link href="/catalog">Catalog</Link> /{" "}
-          <span>{product.title}</span>
-        </p>
-        <div className={styles.productGrid}>
-          <div className={styles.imageBox}>
-            <img src={product.image} alt={product.title} />
-          </div>
+          <p className={styles.breadcrumb}>
+            <Link href="/">Home</Link> / <Link href="/products">Products</Link> /{" "}
+            <span>{product.name}</span>
+          </p>
+          <div className={styles.productGrid}>
+            <div className={styles.imageBox}>
+              <img src={product.image} alt={product.name} />
+            </div>
 
           <div className={styles.details}>
-            <h1>{product.title}</h1>
-            <p className={styles.price}>{product.price} SGD</p>
+            <h1>{product.name}</h1>
+            <p className={styles.price}>
+              {product.oldPrice && (
+                <span style={{ textDecoration: "line-through", marginRight: "10px", color: "#999" }}>
+                  ${product.oldPrice}
+                </span>
+              )}
+              ${product.price} SGD
+            </p>
+
+            {product.stock === 0 && (
+              <p style={{ color: "#dc3545", fontWeight: "bold", marginBottom: "15px" }}>
+                ⚠️ Out of Stock
+              </p>
+            )}
+
+            {product.stock > 0 && product.stock < 5 && (
+              <p style={{ color: "#ff9800", fontWeight: "bold", marginBottom: "15px" }}>
+                ⚠️ Only {product.stock} left in stock!
+              </p>
+            )}
 
             <h4>Description</h4>
-            <p>{product.description}</p>
+            <p>{product.description || "Beautiful flower arrangement for any occasion."}</p>
 
-            <h4>Composition Of The Bouquet</h4>
-            <p>{product.composition}</p>
+            <h4>Category</h4>
+            <p>{product.category}</p>
 
-            <h4>Delivery</h4>
-            <p>{product.delivery}</p>
+            {product.featured && (
+              <p style={{ color: "#c78a3a", fontWeight: "bold" }}>⭐ Featured Product</p>
+            )}
+
+            {product.bestSelling && (
+              <p style={{ color: "#4caf50", fontWeight: "bold" }}>🔥 Best Selling</p>
+            )}
 
             <h4>Quantity</h4>
             <div className={styles.qtyRow}>
               <button
                 className={styles.qtyRow1}
                 onClick={() => qty > 1 && setQty(qty - 1)}
+                disabled={product.stock === 0}
               >
                 -
               </button>
@@ -402,20 +503,29 @@ export default function ProductDetails() {
 
               <button
                 className={styles.qtyRow1}
-                onClick={() => setQty(qty + 1)}
+                onClick={() => product.stock > qty && setQty(qty + 1)}
+                disabled={product.stock === 0 || qty >= product.stock}
               >
                 +
               </button>
               <div className={styles.btnWrap}>
-                {" "}
-                <button className={styles.seeMore}>See More</button>{" "}
-              </div>
-              <div className={styles.btnWrap}>
-                <button className={styles.addToBag} onClick={handleAddToBag}>
-                  Add to Bag
+                <button 
+                  className={styles.addToBag} 
+                  onClick={handleAddToBag}
+                  disabled={product.stock === 0}
+                  style={{
+                    backgroundColor: product.stock === 0 ? "#ccc" : undefined,
+                    cursor: product.stock === 0 ? "not-allowed" : "pointer"
+                  }}
+                >
+                  {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
                 </button>
               </div>
             </div>
+
+            <p style={{ marginTop: "15px", fontSize: "14px", color: "#666" }}>
+              <strong>Stock:</strong> {product.stock} available
+            </p>
           </div>
         </div>
         
