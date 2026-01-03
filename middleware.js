@@ -11,15 +11,21 @@ export async function middleware(request) {
             secret: process.env.NEXTAUTH_SECRET 
         });
 
+        console.log("🔒 Middleware:", pathname, "| Token:", token ? `User: ${token.email}, Role: ${token.role}` : "No token");
+
         // Protect admin routes
         if (pathname.startsWith("/admin")) {
             if (!token) {
+                console.log("❌ No token - redirecting to login");
                 return NextResponse.redirect(new URL("/login?callbackUrl=" + pathname, request.url));
             }
 
             if (token.role !== "admin") {
+                console.log("❌ Not admin - role:", token.role, "- redirecting to home");
                 return NextResponse.redirect(new URL("/", request.url));
             }
+            
+            console.log("✅ Admin access granted");
         }
 
         // Protect user routes
@@ -31,7 +37,7 @@ export async function middleware(request) {
 
         return NextResponse.next();
     } catch (error) {
-        console.error("Middleware error:", error);
+        console.error("❌ Middleware error:", error);
         return NextResponse.next();
     }
 }
