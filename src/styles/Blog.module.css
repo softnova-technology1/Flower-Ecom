@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+
 .hero {
   position: relative;
   height: 100vh;
@@ -14,12 +15,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust darkness */
+  background: rgba(0, 0, 0, 0.55);
+  /* adjust darkness */
   z-index: 1;
 }
 
 /* CONTENT ABOVE OVERLAY */
-.hero > * {
+.hero>* {
   position: relative;
   z-index: 2;
 }
@@ -29,6 +31,7 @@
   justify-content: space-between;
   height: 200px;
 }
+
 .contents {
   position: relative;
   z-index: 2;
@@ -51,6 +54,7 @@
   margin-bottom: 2rem;
   font-family: "Syne", sans-serif;
 }
+
 .contents p {
   font-size: 18px;
   font-weight: 500;
@@ -63,15 +67,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-   padding: 40px;
-   overflow: hidden;
+  padding: 40px;
+  overflow: hidden;
 }
 
 .main1 h1 {
   color: white;
   font-size: 70px;
   font-weight: 700;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .main2 {
@@ -81,7 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
 }
 
 .pImage {
@@ -101,8 +105,9 @@
   z-index: 999;
   top: 50%;
   left: 50%;
- 
+
 }
+
 .blogwrapper {
   width: 100%;
   background: #0f1111;
@@ -134,7 +139,7 @@
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 15px;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .blogimg {
@@ -152,14 +157,37 @@
   margin-bottom: 15px;
   color: #ddd;
   font-weight: 700;
-   font-family: "Syne", sans-serif;
+  font-family: "Syne", sans-serif;
 }
 
 .blogdesc {
   font-size: 16px;
   line-height: 1.6;
   color: #ccc;
+  margin-bottom: 20px;
 }
+
+.readMoreBtn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: transparent;
+  color: #c78a3a;
+  border: 1px solid #c78a3a;
+  border-radius: 4px;
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.readMoreBtn:hover {
+  background: #c78a3a;
+  color: white;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
     height: 65vh;
@@ -169,10 +197,12 @@
     padding-top: 15rem;
     justify-content: normal;
   }
-   .blogcontainer{
-    grid-template-columns: repeat(2,1fr);
+
+  .blogcontainer {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .blogimg{
+
+  .blogimg {
     height: auto;
   }
 }
@@ -189,16 +219,25 @@
     height: auto;
     justify-content: normal;
   }
-  .blogcontainer{
-    grid-template-columns: repeat(1,1fr);
+
+  .blogcontainer {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .blogimg{
+
+  .blogimg {
     height: auto;
   }
-  .blogdesc{
+
+  .blogdesc {
     font-size: 14px;
   }
-  .contents h1,.heading1,.headers1 h1,.headingf,.headingmain,.heading{
+
+  .contents h1,
+  .heading1,
+  .headers1 h1,
+  .headingf,
+  .headingmain,
+  .heading {
     font-size: 28px !important;
   }
 }

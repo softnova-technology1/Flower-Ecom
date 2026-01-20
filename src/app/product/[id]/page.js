@@ -352,6 +352,7 @@ export default function ProductDetails() {
   const router = useRouter();
   const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
+  const [relatedProducts, setRelatedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [qty, setQty] = useState(1);
 
@@ -360,9 +361,24 @@ export default function ProductDetails() {
       try {
         const response = await fetch(`/api/products/${id}`);
         const data = await response.json();
-        
+
         if (data.success) {
           setProduct(data.product);
+
+          // Fetch related products
+          try {
+            const relatedRes = await fetch(`/api/products?category=${data.product.category}&limit=4`);
+            const relatedData = await relatedRes.json();
+            if (relatedData.success) {
+              const filtered = relatedData.products
+                .filter(p => p._id !== data.product._id)
+                .slice(0, 3);
+              setRelatedProducts(filtered);
+            }
+          } catch (err) {
+            console.error("Error fetching related products", err);
+          }
+
         } else {
           toast.error("Product not found");
         }
@@ -397,14 +413,14 @@ export default function ProductDetails() {
         <FinalNav />
         <div style={{ textAlign: "center", padding: "100px 20px" }}>
           <h2>Product not found</h2>
-          <button onClick={() => router.push("/products")} style={{ 
-            marginTop: "20px", 
-            padding: "10px 20px", 
-            background: "#c78a3a", 
-            color: "white", 
-            border: "none", 
-            borderRadius: "6px", 
-            cursor: "pointer" 
+          <button onClick={() => router.push("/products")} style={{
+            marginTop: "20px",
+            padding: "10px 20px",
+            background: "#c78a3a",
+            color: "white",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer"
           }}>
             Browse Products
           </button>
@@ -419,7 +435,7 @@ export default function ProductDetails() {
       toast.error("Product is out of stock");
       return;
     }
-    
+
     if (qty > product.stock) {
       toast.error(`Only ${product.stock} items available`);
       return;
@@ -431,9 +447,10 @@ export default function ProductDetails() {
       price: product.price,
       image: product.image,
       qty: qty,
-      stock: product.stock
+      stock: product.stock,
+      description: product.description || "Beautiful flower arrangement"
     });
-    
+
     toast.success("Added to cart!");
     setTimeout(() => router.push("/basket"), 1000);
   };
@@ -452,83 +469,100 @@ export default function ProductDetails() {
               <img src={product.image} alt={product.name} />
             </div>
 
-          <div className={styles.details}>
-            <h1>{product.name}</h1>
-            <p className={styles.price}>
-              {product.oldPrice && (
-                <span style={{ textDecoration: "line-through", marginRight: "10px", color: "#999" }}>
-                  ${product.oldPrice}
-                </span>
+            <div className={styles.details}>
+              <h1>{product.name}</h1>
+              <p className={styles.price}>
+                {product.oldPrice && (
+                  <span style={{ textDecoration: "line-through", marginRight: "10px", color: "#999" }}>
+                    ${product.oldPrice}
+                  </span>
+                )}
+                ${product.price} SGD
+              </p>
+
+              {product.stock === 0 && (
+                <p style={{ color: "#dc3545", fontWeight: "bold", marginBottom: "15px" }}>
+                  ⚠️ Out of Stock
+                </p>
               )}
-              ${product.price} SGD
-            </p>
 
-            {product.stock === 0 && (
-              <p style={{ color: "#dc3545", fontWeight: "bold", marginBottom: "15px" }}>
-                ⚠️ Out of Stock
-              </p>
-            )}
+              {product.stock > 0 && product.stock < 5 && (
+                <p style={{ color: "#ff9800", fontWeight: "bold", marginBottom: "15px" }}>
+                  ⚠️ Only {product.stock} left in stock!
+                </p>
+              )}
 
-            {product.stock > 0 && product.stock < 5 && (
-              <p style={{ color: "#ff9800", fontWeight: "bold", marginBottom: "15px" }}>
-                ⚠️ Only {product.stock} left in stock!
-              </p>
-            )}
+              <h4>Description</h4>
+              <p>{product.description || "Beautiful flower arrangement for any occasion."}</p>
 
-            <h4>Description</h4>
-            <p>{product.description || "Beautiful flower arrangement for any occasion."}</p>
+              <h4>Category</h4>
+              <p>{product.category}</p>
 
-            <h4>Category</h4>
-            <p>{product.category}</p>
+              {product.featured && (
+                <p style={{ color: "#c78a3a", fontWeight: "bold" }}>⭐ Featured Product</p>
+              )}
 
-            {product.featured && (
-              <p style={{ color: "#c78a3a", fontWeight: "bold" }}>⭐ Featured Product</p>
-            )}
+              {product.bestSelling && (
+                <p style={{ color: "#4caf50", fontWeight: "bold" }}>🔥 Best Selling</p>
+              )}
 
-            {product.bestSelling && (
-              <p style={{ color: "#4caf50", fontWeight: "bold" }}>🔥 Best Selling</p>
-            )}
-
-            <h4>Quantity</h4>
-            <div className={styles.qtyRow}>
-              <button
-                className={styles.qtyRow1}
-                onClick={() => qty > 1 && setQty(qty - 1)}
-                disabled={product.stock === 0}
-              >
-                -
-              </button>
-
-              <span>{qty}</span>
-
-              <button
-                className={styles.qtyRow1}
-                onClick={() => product.stock > qty && setQty(qty + 1)}
-                disabled={product.stock === 0 || qty >= product.stock}
-              >
-                +
-              </button>
-              <div className={styles.btnWrap}>
-                <button 
-                  className={styles.addToBag} 
-                  onClick={handleAddToBag}
+              <h4>Quantity</h4>
+              <div className={styles.qtyRow}>
+                <button
+                  className={styles.qtyRow1}
+                  onClick={() => qty > 1 && setQty(qty - 1)}
                   disabled={product.stock === 0}
-                  style={{
-                    backgroundColor: product.stock === 0 ? "#ccc" : undefined,
-                    cursor: product.stock === 0 ? "not-allowed" : "pointer"
-                  }}
                 >
-                  {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
+                  -
                 </button>
+
+                <span>{qty}</span>
+
+                <button
+                  className={styles.qtyRow1}
+                  onClick={() => product.stock > qty && setQty(qty + 1)}
+                  disabled={product.stock === 0 || qty >= product.stock}
+                >
+                  +
+                </button>
+                <div className={styles.btnWrap}>
+                  <button
+                    className={styles.addToBag}
+                    onClick={handleAddToBag}
+                    disabled={product.stock === 0}
+                    style={{
+                      backgroundColor: product.stock === 0 ? "#ccc" : undefined,
+                      cursor: product.stock === 0 ? "not-allowed" : "pointer"
+                    }}
+                  >
+                    {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
+                  </button>
+                </div>
+              </div>
+
+              <p style={{ marginTop: "15px", fontSize: "14px", color: "#666" }}>
+                <strong>Stock:</strong> {product.stock} available
+              </p>
+            </div>
+          </div>
+
+          {relatedProducts.length > 0 && (
+            <div className={styles.seeAlso}>
+              <h2 style={{ fontSize: "24px", marginBottom: "20px", fontFamily: 'Georgia, serif' }}>See Also</h2>
+              <div className={styles.related}>
+                {relatedProducts.map((rel) => (
+                  <Link href={`/product/${rel._id}`} key={rel._id} className={styles.relatedCard}>
+                    <img src={rel.image} alt={rel.name} />
+                    <div style={{ display: "flex", justifyContent: "space-between", marginTop: "12px" }}>
+                      <span style={{ color: "#fff", fontSize: "16px" }}>{rel.name}</span>
+                      <span style={{ color: "#c46ccf", fontSize: "16px" }}>{rel.price} SGD</span>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
+          )}
 
-            <p style={{ marginTop: "15px", fontSize: "14px", color: "#666" }}>
-              <strong>Stock:</strong> {product.stock} available
-            </p>
-          </div>
-        </div>
-        
         </Container>
 
       </div>

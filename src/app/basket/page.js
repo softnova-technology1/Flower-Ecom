@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "@/styles/Basket.module.css";
-import { getCart, updateQty, removeFromCart } from "@/utils/cart";
+// import { getCart, updateQty, removeFromCart } from "@/utils/cart";
+import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import FinalNav from "@/components/FinalNav";
@@ -10,11 +11,7 @@ import { Container } from "react-bootstrap";
 
 export default function BasketPage() {
   const router = useRouter();
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    setCart(getCart());
-  }, []);
+  const { cart, updateQty, removeFromCart } = useCart();
 
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
@@ -37,11 +34,8 @@ export default function BasketPage() {
 
                   <div className={styles.qty}>
                     <button
-                      onClick={() => {
-                        updateQty(item.id, item.qty - 1);
-                        setCart(getCart());
-                      }}
-                      disabled={item.qty === 1}
+                      onClick={() => updateQty(item.id, item.qty - 1)}
+                      disabled={item.qty <= 1}
                     >
                       -
                     </button>
@@ -49,10 +43,7 @@ export default function BasketPage() {
                     <span>{item.qty}</span>
 
                     <button
-                      onClick={() => {
-                        updateQty(item.id, item.qty + 1);
-                        setCart(getCart());
-                      }}
+                      onClick={() => updateQty(item.id, item.qty + 1)}
                     >
                       +
                     </button>
@@ -60,10 +51,7 @@ export default function BasketPage() {
 
                   <button
                     className={styles.remove}
-                    onClick={() => {
-                      removeFromCart(item.id);
-                      setCart(getCart());
-                    }}
+                    onClick={() => removeFromCart(item.id)}
                   >
                     Remove
                   </button>

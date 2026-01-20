@@ -4,14 +4,15 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
-import { 
-    MdDashboard, 
-    MdShoppingCart, 
-    MdInventory, 
+import {
+    MdDashboard,
+    MdShoppingCart,
+    MdInventory,
     MdPeople,
     MdStorefront,
     MdLogout,
-    MdArrowBack
+    MdArrowBack,
+    MdDescription
 } from "react-icons/md";
 import styles from "@/styles/AdminSidebar.module.css";
 
@@ -22,6 +23,7 @@ export default function AdminSidebar() {
         { href: "/admin", label: "Dashboard", icon: MdDashboard },
         { href: "/admin/orders", label: "Orders", icon: MdShoppingCart },
         { href: "/admin/products", label: "Products", icon: MdInventory },
+        { href: "/admin/blogs/add", label: "Add Blog", icon: MdDescription },
         { href: "/admin/users", label: "Users", icon: MdPeople },
     ];
 
@@ -41,7 +43,7 @@ export default function AdminSidebar() {
                 {navLinks.map((link) => {
                     const Icon = link.icon;
                     const isActive = pathname === link.href;
-                    
+
                     return (
                         <Link
                             key={link.href}

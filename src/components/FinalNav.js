@@ -9,7 +9,7 @@ import ResetPop from "@/components/ResetPop";
 export default function FinalNav() {
   const [popup, setPopup] = useState(null);
 
-  
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -76,7 +76,7 @@ export default function FinalNav() {
             </div>
 
             {/* CART */}
-            <div className={styles.NavIcons}>
+            <Link href="/basket" className={styles.NavIcons}>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -100,7 +100,7 @@ export default function FinalNav() {
                   .75.75 0 0 1 1.5 0Z"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
       </nav>
